@@ -22,7 +22,7 @@ Not all commands are listed here!
 * Steals all saved passwords from many browsers
 * see pc information
 * run <program> [<arguments> <working dir>]
-
+* Sets it's self to startup
   # How to use?
   Requirements: some knowledge is always good + visual studio
   
