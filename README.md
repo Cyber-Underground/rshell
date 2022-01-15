@@ -1,7 +1,7 @@
 # rshell
 Good remote shell in C# .net, blocks all known debuggers and has a lot commands.
 
-<img src="https://img0.imguh.com/2020/11/29/Screenshot_15d84b6f241cff859.png" alt="Screenshot 1" border="0">
+<img src="https://github.com/spuqe/rshell/blob/main/Screenshot_1.jpg" alt="RSHELL" border="0">
 
 # Some stats
 Lines of code (stub): 1 679
