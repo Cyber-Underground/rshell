@@ -9,8 +9,6 @@ Lines of code (listener):  768
 Total: 2 447 lines of code.
 Stats last updated: 9.11.2020 (Out dated as fuck) 
 
-# Name? 
-Yeah uhhh changed the name to GOAT RAT cause it sounds more epic than r-shell thought I didn't change file names ahaha
 # Features
 Updated: 24.12.2020
 Not all commands are listed here!
