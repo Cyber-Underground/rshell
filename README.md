@@ -1,13 +1,7 @@
 # rshell
-Good remote shell in C# .net, blocks all known debuggers and has a lot commands.
+Remote shell made in C#, blocks all known debuggers, vm's and sandboxes.
 
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
-
-# Some stats
-Lines of code (stub): 1 679
-Lines of code (listener):  768
-Total: 2 447 lines of code.
-Stats last updated: 9.11.2020 (Out dated as fuck) 
 
 # Features
 Updated: 24.12.2020
@@ -24,6 +18,8 @@ Not all commands are listed here!
   # How to use?
   Requirements: some knowledge is always good + visual studio
   
+  
+  # How to use?
   First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
   Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
   http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
