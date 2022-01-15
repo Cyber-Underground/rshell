@@ -5,19 +5,24 @@ Remote shell made in C#, blocks all known debuggers, vm's and sandboxes.
 
 # Features
 Updated: 24.12.2020
-Not all commands are listed here!
 * Prompt to start application with administrator privileges
 * Anti-analysis
-* Run any application on pc
+* Run any application installed on the pc
 * Send any Powershell or CMD commands to user
 * See active windows
-* Steals all saved passwords from many browsers
+* Steals all saved passwords from browsers
 * see pc information
 * run <program> [<arguments> <working dir>]
 * Sets it's self to startup
-  # How to use?
-  Requirements: some knowledge is always good + visual studio
-  
+* Download files from out side sources
+* Upload files
+* kill processes
+* Watch network traffic
+* See files in current folder
+* List all services
+* Search for services
+* See installation location
+
   
   # How to use?
   First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
