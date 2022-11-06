@@ -55,14 +55,13 @@ Open rshell client, find host IP which is encoded with base64, now you should ad
 http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
 Now build the file and hope it works x)
 
-# Rshell
-Project Rshell is a remote control malware. For legal reasons that was a joke and it’s a remote administrator tool for private usage. Not for malicious usage x) Rshell can be used for many purposes! Not everyone is evil! Well anyways.. This docs was made to share our speed of progress and more details of the progress to education purposes later. Everything we think is important is bolded!We have also tried to add links to sources with information about stuff we talk about. If you want to know more of how it works and how it was made and what happend while doing it go and read the "Rshell blog" down there right after ToDo!
-<img src="https://img0.imguh.com/2020/11/29/Screenshot_15d84b6f241cff859.png" alt="Screenshot 1" border="0">
-
 # ToDo:
 * Improve anti-vm and anti-debug systems.
 * Make command handling faster.
 * Add better encrypting to data transfer
+
+# Rshell
+Project Rshell is a remote control malware. For legal reasons that was a joke and it’s a remote administrator tool for private usage. Not for malicious usage x) Rshell can be used for many purposes! Not everyone is evil! Well anyways.. This docs was made to share our speed of progress and more details of the progress to education purposes later. Everything we think is important is bolded!We have also tried to add links to sources with information about stuff we talk about.
 
 # How does it work?
 So you are wondering how it works? Let me tell you!
