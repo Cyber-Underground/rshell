@@ -20,12 +20,6 @@ sandboxing software such as:
 * Oracle VirtualBox
 * Sandboxie
 
-# How to use?
-First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
-Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
-http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
-Now build the file and hope it works x)
-
 All other features:
 * Add program to Windows startup (you can choose the key name in registry)
 * Copy program to current user's Startup folder where it will be opened when Windows reboots.
@@ -92,6 +86,12 @@ All other features:
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 Basically anything based on chromium or gecko
+
+# How to use?
+First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
+Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
+http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
+Now build the file and hope it works x)
 
 # ToDo:
 * Improve anti-vm and anti-debug systems.
