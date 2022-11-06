@@ -22,14 +22,10 @@ sandboxing software such as:
 All other features:
 * Add program to Windows startup (you can choose the key name in registry)
 * Copy program to current user's Startup folder where it will be opened when Windows reboots.
-* Set dropped file's attributes (Hidden, System)
-* Hide console window (for console applications)
-* Execution from memory without dropping file to disk (RunPE, RunManagedPE, .NET reflection)
 * Prompt to start application with administrator privileges
 * Customize drop path for items that are dropped to disk (including downloads)
 * Optional message that appears once the application is executed
 * Anti-analysis
-* Multiple obfuscated/encrypted stubs to choose from
 * Send any Powershell or CMD commands to user
 * See active windows
 * Steals all saved passwords from many browsers (told in the previous text)
@@ -65,7 +61,6 @@ Project Rshell is a remote control malware. For legal reasons that was a joke an
 
 # ToDo:
 * Improve anti-vm and anti-debug systems.
-* Add XyZ sharp protocol support
 * Make command handling faster.
 * Add better encrypting to data transfer
 
