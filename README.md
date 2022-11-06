@@ -27,6 +27,7 @@ sandboxing software such as:
 * VMware Workstation
 * Oracle VirtualBox
 * Sandboxie
+
 All other features:
 * Add program to Windows startup (you can choose the key name in registry)
 * Copy program to current user's Startup folder where it will be opened when Windows reboots.
@@ -61,7 +62,6 @@ All other features:
 * Search for services
 * See installation location
 
-  
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
 Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
