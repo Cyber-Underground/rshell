@@ -4,15 +4,6 @@ Last update: 16.1.22
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
 # Features
-* Completely evades at least the following automated malware analysis environments
-* Any.Run
-* Intezer Analysis
-* VirusTotal Jujubox
-* Hybrid Analysis
-* Cuckoo Sandbox
-* Joe Sandbox
-Can evade more and probably completely evade a lot of sites we haven't tested yet.
-
 Completely evades at least the following automated malware analysis environments
 * Any.Run
 * Intezer Analysis
