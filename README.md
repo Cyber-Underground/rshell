@@ -83,7 +83,7 @@ All other features:
 | 15 | Kingsoft | ❌ | 
 | 16 | Webroot | ❌ | 
 | 17 | TrendMicro | ❌ | 
-| 18 | Arcabit | &#9989 | IL:Trojan.MSILZilla.D5D05 |
+| 18 | Arcabit | &#9989; | IL:Trojan.MSILZilla.D5D05 |
 | 19 | Yandex | ❌ |
 | 20 | NANO | ❌ | 
 --------------------------------------------------
