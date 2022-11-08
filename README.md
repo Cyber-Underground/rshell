@@ -128,3 +128,5 @@ All other features:
 | 29 | BlackHaw | &#9989; | &#9989; | &#8987; | &#8987; |
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
+
+Rshell is developed with the intension of using this tool only for educational purpose.
