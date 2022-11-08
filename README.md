@@ -70,15 +70,22 @@ All other features:
 | 2 | Microsoft Defender | ❌ | 
 | 3 | Avast | ❌ | 
 | 4 | F-secure | &#9989; | Heuristic.HEUR/AGEN.1203518 |
-| 5 | Malwarebytes |  &#9989; | 
+| 5 | Malwarebytes | ❌ | 
 | 6 | Fortinet | ❌ | 
 | 7 | BitDefender | &#9989; |  IL:Trojan.MSILZilla.23813 |
-| 8 | Kaspersky | ❌ | 
+| 8 | Kaspersky | &#9989; | HEUR:Backdoor.MSIL.Agent.gen |
 | 9 | NANO-Antivirus | ❌ | 
 | 10 | ClamAV | ❌ | 
 | 11 | AVG | ❌ | 
 | 12 | Alibaba | ❌ | 
-| 12 | Avira | &#9989; | HEUR/AGEN.1203518 |
+| 13 | Avira | &#9989; | HEUR/AGEN.1203518 |
+| 14 | Baidu | ❌ | 
+| 15 | Kingsoft | ❌ | 
+| 16 | Webroot | ❌ | 
+| 17 | TrendMicro | ❌ | 
+| 18 | Arcabit | &#9989 | IL:Trojan.MSILZilla.D5D05 |
+| 19 | Yandex | ❌ |
+| 20 | NANO | ❌ | 
 --------------------------------------------------
 
 ### Tested sandboxes
