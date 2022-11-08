@@ -99,7 +99,7 @@ Basically anything based on chromium or gecko
 | 4 | Fortinet | &#8987; | 
 | 4 | BitDefender | &#8987; | 
 | 4 | Kaspersky | &#8987; | 
-
+--------------------------------------------------
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
 Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
