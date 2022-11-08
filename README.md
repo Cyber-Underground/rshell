@@ -86,6 +86,19 @@ All other features:
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 Basically anything based on chromium or gecko
+  
+# Tested anti malware providers:
+
+| № | Name | Detected |
+| --- | --- |
+| 1 | Chrome | &#8987; | 
+| 2 | Defender | &#8987; | 
+| 3 | Avast | &#8987; | 
+| 4 | F-secure | &#8987; | 
+| 4 | Malwarebytes | &#8987; | 
+| 4 | Fortinet | &#8987; | 
+| 4 | BitDefender | &#8987; | 
+| 4 | Kaspersky | &#8987; | 
 
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
