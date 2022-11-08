@@ -88,18 +88,23 @@ All other features:
 Basically anything based on chromium or gecko
   
 # Tested anti malware providers:
-
+  
 | № | Name | Detected |
 | --- | --- | --- |
-| 1 | Chrome | ❌ | 
-| 2 | Defender | ❌ | 
+| 1 | McAfee | ❌ | 
+| 2 | Microsoft Defender | ❌ | 
 | 3 | Avast | ❌ | 
 | 4 | F-secure | ❌ | 
-| 4 | Malwarebytes | ❌ | 
-| 4 | Fortinet | ❌ | 
-| 4 | BitDefender | ❌ | 
-| 4 | Kaspersky | ❌ | 
+| 5 | Malwarebytes | ❌ | 
+| 6 | Fortinet | ❌ | 
+| 7 | BitDefender | ❌ | 
+| 8 | Kaspersky | ❌ | 
+| 9 | NANO-Antivirus | ❌ | 
+| 10 | ClamAV | ❌ | 
+| 11 | AVG | ❌ | 
+| 12 | Alibaba | ❌ | 
 --------------------------------------------------
+
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
 Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
