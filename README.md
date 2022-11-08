@@ -90,7 +90,7 @@ Basically anything based on chromium or gecko
 # Tested anti malware providers:
 
 | № | Name | Detected |
-| --- | --- |
+| --- | --- | --- |
 | 1 | Chrome | &#8987; | 
 | 2 | Defender | &#8987; | 
 | 3 | Avast | &#8987; | 
