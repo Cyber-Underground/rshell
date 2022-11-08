@@ -96,7 +96,7 @@ All other features:
 | 8 | VmWare |  &#9989; | 
 | 9 | VirtualBox |  &#9989; | 
 | 10 | SandBoxie |  &#9989; |
-| 11 | Windows Sandbox |❌| 
+| 11 | Windows Sandbox | &#9989; | 
 
 --------------------------------------------------
 
