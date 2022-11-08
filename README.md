@@ -6,12 +6,6 @@ Last update: 16.1.22
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
 # How to use?
-First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
-Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
-http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
-Now build the file and hope it works x)
-
-# How to use?
 1. Open rshell client in visual studio, scroll to line 160 where you see "address"
 2. Decode your IP address to base64 for example ```https://127.0.0.1:8080 = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==```
 3. Build project
