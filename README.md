@@ -91,7 +91,9 @@ All other features:
 | 4 | Hybrid Analysis |  &#9989; | 
 | 6 | Joe Sandbox |  &#9989; | 
 | 7 | Cuckoo Sandbox |  &#9989; | 
-
+| 8 | VmWare |  &#9989; | 
+| 9 | VirtualBox |  &#9989; | 
+| 10 | SandBoxie |  &#9989; | 
 --------------------------------------------------
 
 ### Tested browsers:
