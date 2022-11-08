@@ -37,3 +37,13 @@ C:\Users\CryT0r\Desktop\projects\RShell\2.8\rshell-server\rshell-server\obj\Rele
 C:\Users\CryT0r\Desktop\projects\RShell\2.8\rshell-server\rshell-server\obj\Release\rshell-server.csproj.CopyComplete
 C:\Users\CryT0r\Desktop\projects\RShell\2.8\rshell-server\rshell-server\obj\Release\rshell-server.exe
 C:\Users\CryT0r\Desktop\projects\RShell\2.8\rshell-server\rshell-server\obj\Release\rshell-server.pdb
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\bin\Release\rshell-server.exe.config
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\bin\Release\rshell-server.exe
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\bin\Release\rshell-server.pdb
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\bin\Release\Newtonsoft.Json.dll
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\bin\Release\Newtonsoft.Json.xml
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\obj\Release\rshell-server.csproj.AssemblyReference.cache
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\obj\Release\rshell-server.csproj.CoreCompileInputs.cache
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\obj\Release\rshell-server.csproj.CopyComplete
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\obj\Release\rshell-server.exe
+C:\Users\NIVIV\Desktop\rshell-main\rshell-server\rshell-server\obj\Release\rshell-server.pdb

