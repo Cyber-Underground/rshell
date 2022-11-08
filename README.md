@@ -11,11 +11,17 @@ Open rshell client, find host IP which is encoded with base64, now you should ad
 http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
 Now build the file and hope it works x)
 
+# How to use?
+1. Open rshell client in visual studio, scroll to line 160 where you see "address"
+2. Decode your IP address to base64 for example ```https://127.0.0.1:8080 = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==```
+3. Build project
+4. Open listener in administrator on in linux as sudo. Use rshell server netcore on linux and just rshell-server for windows
+5. Start listening to port you put in the stub, in above we used port 8080 so we will do that too.
+
 # ToDo:
 * Improve anti-vm and anti-debug systems.
 * Make command handling faster.
 * Add better encrypting to data transfer
-
 
 # Features
 Completely evades at least the following automated malware analysis environments
@@ -39,7 +45,6 @@ All other features:
 * Prompt to start application with administrator privileges
 * Customize drop path for items that are dropped to disk (including downloads)
 * Optional message that appears once the application is executed
-* Anti-analysis
 * Send any Powershell or CMD commands to user
 * See active windows
 * Steals all saved passwords from many browsers (told in the previous text)
@@ -90,7 +95,7 @@ All other features:
 | 1 | Any.Run |  &#9989; | 
 | 2 | Intezer Analysis |  &#9989; | 
 | 3 | VirusTotal Jujubox |  &#9989; | 
-| 4 | Hubrid Analysis |  &#9989; | 
+| 4 | Hybrid Analysis |  &#9989; | 
 | 6 | Joe Sandbox |  &#9989; | 
 | 7 | Cuckoo Sandbox |  &#9989; | 
 
