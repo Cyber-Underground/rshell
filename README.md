@@ -64,20 +64,21 @@ All other features:
 
 ### Tested anti malware providers:
   
-| № | Name | Detected |
-| --- | --- | --- |
+| № | Name | Detected | Detection |
+| --- | --- | --- | --- |
 | 1 | McAfee | ❌ | 
 | 2 | Microsoft Defender | ❌ | 
 | 3 | Avast | ❌ | 
-| 4 | F-secure | ❌ | 
+| 4 | F-secure | &#9989; | Heuristic.HEUR/AGEN.1203518 |
 | 5 | Malwarebytes |  &#9989; | 
 | 6 | Fortinet | ❌ | 
-| 7 | BitDefender | ❌ | 
+| 7 | BitDefender | &#9989; |  IL:Trojan.MSILZilla.23813 |
 | 8 | Kaspersky | ❌ | 
 | 9 | NANO-Antivirus | ❌ | 
 | 10 | ClamAV | ❌ | 
 | 11 | AVG | ❌ | 
 | 12 | Alibaba | ❌ | 
+| 12 | Avira | &#9989; | HEUR/AGEN.1203518 |
 --------------------------------------------------
 
 ### Tested sandboxes
