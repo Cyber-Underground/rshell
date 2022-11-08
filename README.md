@@ -40,7 +40,6 @@ All other features:
 * Customize drop path for items that are dropped to disk (including downloads)
 * Optional message that appears once the application is executed
 * Send any Powershell or CMD commands to user
-* See active windows
 * Steals all saved passwords from many browsers (told in the previous text)
 * see pc information
 * run <program> [<arguments> <working dir>]
@@ -49,7 +48,6 @@ All other features:
 * Run any application installed on the pc
 * Send any Powershell or CMD commands to user
 * See active windows
-* Steals all saved passwords from browsers
 * see pc information
 * run <program> [<arguments> <working dir>]
 * Sets it's self to startup
