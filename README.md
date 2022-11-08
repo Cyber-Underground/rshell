@@ -91,9 +91,8 @@ All other features:
 | 2 | Intezer Analysis |  &#9989; | 
 | 3 | VirusTotal Jujubox |  &#9989; | 
 | 4 | Hubrid Analysis |  &#9989; | 
-| 5 | Malwarebytes |  &#9989; | 
-| 6 | Cuckoo Sandbox |  &#9989; | 
-| 7 | Joe Sandbox | &#9989; | 
+| 6 | Joe Sandbox |  &#9989; | 
+| 7 | Cuckoo Sandbox |  &#9989; | 
 
 --------------------------------------------------
 
