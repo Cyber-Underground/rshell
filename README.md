@@ -70,7 +70,7 @@ All other features:
 | 2 | Microsoft Defender | ❌ | 
 | 3 | Avast | ❌ | 
 | 4 | F-secure | ❌ | 
-| 5 | Malwarebytes | ❌ | 
+| 5 | Malwarebytes |  &#9989; | 
 | 6 | Fortinet | ❌ | 
 | 7 | BitDefender | ❌ | 
 | 8 | Kaspersky | ❌ | 
