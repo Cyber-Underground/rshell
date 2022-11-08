@@ -5,6 +5,18 @@ Last update: 16.1.22
 
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
+# How to use?
+First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
+Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
+http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
+Now build the file and hope it works x)
+
+# ToDo:
+* Improve anti-vm and anti-debug systems.
+* Make command handling faster.
+* Add better encrypting to data transfer
+
+
 # Features
 Completely evades at least the following automated malware analysis environments
 * Any.Run
@@ -122,16 +134,6 @@ All other features:
 --------------------------------------------------
 Basically anything based on chromium or gecko
 
-# How to use?
-First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
-Open rshell client, find host IP which is encoded with base64, now you should add your own IP + port you will be listening at into it as base64 for example 
-http://127.0.0.1:1337/ = aHR0cDovLzEyNy4wLjAuMToxMzM3Lw==
-Now build the file and hope it works x)
-
-# ToDo:
-* Improve anti-vm and anti-debug systems.
-* Make command handling faster.
-* Add better encrypting to data transfer
 
 # Rshell
 Project Rshell is a remote control malware. For legal reasons that was a joke and it’s a remote administrator tool for private usage. Not for malicious usage x) Rshell can be used for many purposes! Not everyone is evil! Well anyways.. This docs was made to share our speed of progress and more details of the progress to education purposes later. Everything we think is important is bolded!We have also tried to add links to sources with information about stuff we talk about.
