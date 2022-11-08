@@ -55,3 +55,12 @@ C:\Users\CryT0r\Desktop\projects\CryingReaper\1.0\CryingReaper\rshell\bin\Debug\
 C:\Users\CryT0r\Desktop\projects\CryingReaper\1.0\CryingReaper\rshell\obj\Debug\CryingWolf.Properties.Resources.resources
 C:\Users\CryT0r\Desktop\projects\CryingReaper\1.0\CryingReaper\rshell\obj\Debug\CryingWolf.exe
 C:\Users\CryT0r\Desktop\projects\CryingReaper\1.0\CryingReaper\rshell\obj\Debug\CryingWolf.pdb
+C:\Users\NIVIV\Desktop\rshell\rshell\bin\Debug\rshell.exe.config
+C:\Users\NIVIV\Desktop\rshell\rshell\bin\Debug\rshell.exe
+C:\Users\NIVIV\Desktop\rshell\rshell\bin\Debug\rshell.pdb
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.csproj.AssemblyReference.cache
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.Properties.Resources.resources
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.csproj.GenerateResource.cache
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.csproj.CoreCompileInputs.cache
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.exe
+C:\Users\NIVIV\Desktop\rshell\rshell\obj\Debug\rshell.pdb

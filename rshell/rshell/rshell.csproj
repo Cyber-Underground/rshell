@@ -7,8 +7,8 @@
     <ProjectGuid>{78685BE2-858D-4B99-BBEC-1AF40F5A35E8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CryingWolf</RootNamespace>
-    <AssemblyName>CryingWolf</AssemblyName>
+    <RootNamespace>rshell</RootNamespace>
+    <AssemblyName>rshell</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
