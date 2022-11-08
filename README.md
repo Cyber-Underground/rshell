@@ -128,16 +128,3 @@ All other features:
 | 29 | BlackHaw | &#9989; | &#9989; | &#8987; | &#8987; |
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
-
-
-# Rshell
-Project Rshell is a remote control malware. For legal reasons that was a joke and it’s a remote administrator tool for private usage. Not for malicious usage x) Rshell can be used for many purposes! Not everyone is evil! Well anyways.. This docs was made to share our speed of progress and more details of the progress to education purposes later. Everything we think is important is bolded!We have also tried to add links to sources with information about stuff we talk about.
-
-# How does it work?
-So you are wondering how it works? Let me tell you!
-Rshell is a remote control program. Basically you can control a computer over the internet from another computer or server.
-Rshell uses many kinds of encryption to hide it’s traffic from unwanted people like Anti-virus companies. Rshell uses HTTP requests to send and receive data to do that it uses basic GET and POST requests.
-Rshell only works on windows platforms but it’s listener is supported on both windows and linux. On linux you will need dotnet core and dotnet runtime installed to run it but on windows you don't need anything really. We prefer using the listener on linux based servers than on windows computer as it will be easily traceable if it’s listening on a machine you own yourself. 
-The listener basicly is waiting for connections from infected machines and the listener is used to send and receive data for example commands between the server and infected computer. 
-Our Anti virtual machine mechanism is actually quite simple. It’s custom and private and that’s why it doesn’t trigger Anti virus programs. We call it “Variksenpelätin” and it’s english translation is Scarecrow. We think that Variksenpelätin must be the best name for our method as it scares away everything we don’t want our program to. 
-Why wouldn’t someone want their file to be runned in a virtual machine? Well good question! Virtual machines are often used to analyse malwares which usually leads to the point where the analyser reports the malware to many anti virus companies and that’s when the malware becomes detected. Well to the point! How does our anti virtual machine method work? Well it’s too hard to explain and we really don’t want to share all our secrets to the world :) but we can tell how our anti analysis mechanic works! It basically “kills” the software when a certain application is started. Our system uses XOR encryption to prevent anti virus seeing what applications our system is trying to see. Our system basically is checking every 15 seconds if an black listed application is running. For example you're using some kind of debugger application that we have black listed it will instantly kill the malware and our application starts to act like an normal software on the background. Right after the debugger is closed it will connect back to our listener again.
