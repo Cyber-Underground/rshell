@@ -91,14 +91,14 @@ Basically anything based on chromium or gecko
 
 | № | Name | Detected |
 | --- | --- | --- |
-| 1 | Chrome | &#8987; | 
-| 2 | Defender | &#8987; | 
-| 3 | Avast | &#8987; | 
-| 4 | F-secure | &#8987; | 
-| 4 | Malwarebytes | &#8987; | 
-| 4 | Fortinet | &#8987; | 
-| 4 | BitDefender | &#8987; | 
-| 4 | Kaspersky | &#8987; | 
+| 1 | Chrome | ❌ | 
+| 2 | Defender | ❌ | 
+| 3 | Avast | ❌ | 
+| 4 | F-secure | ❌ | 
+| 4 | Malwarebytes | ❌ | 
+| 4 | Fortinet | ❌ | 
+| 4 | BitDefender | ❌ | 
+| 4 | Kaspersky | ❌ | 
 --------------------------------------------------
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
