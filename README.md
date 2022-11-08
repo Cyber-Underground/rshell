@@ -132,7 +132,6 @@ All other features:
 | 29 | BlackHaw | &#9989; | &#9989; | &#8987; | &#8987; |
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
-Basically anything based on chromium or gecko
 
 
 # Rshell
