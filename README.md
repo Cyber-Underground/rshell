@@ -51,6 +51,8 @@ All other features:
 * Search for services
 * See installation location
   
+--------------------------------------------------
+
 ### Tested anti malware providers:
   
 | № | Name | Detected |
