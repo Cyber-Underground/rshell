@@ -50,8 +50,26 @@ All other features:
 * List all services
 * Search for services
 * See installation location
-
-# Tested browsers:
+  
+### Tested anti malware providers:
+  
+| № | Name | Detected |
+| --- | --- | --- |
+| 1 | McAfee | ❌ | 
+| 2 | Microsoft Defender | ❌ | 
+| 3 | Avast | ❌ | 
+| 4 | F-secure | ❌ | 
+| 5 | Malwarebytes | ❌ | 
+| 6 | Fortinet | ❌ | 
+| 7 | BitDefender | ❌ | 
+| 8 | Kaspersky | ❌ | 
+| 9 | NANO-Antivirus | ❌ | 
+| 10 | ClamAV | ❌ | 
+| 11 | AVG | ❌ | 
+| 12 | Alibaba | ❌ | 
+--------------------------------------------------
+  
+### Tested browsers:
 
 | № | Browser Name | Passwords | Cookies | History | Bookmarks |
 | --- | --- | --- | --- | --- | --- |
@@ -87,24 +105,6 @@ All other features:
 | 30 | Pale Moon | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 Basically anything based on chromium or gecko
-  
-# Tested anti malware providers:
-  
-| № | Name | Detected |
-| --- | --- | --- |
-| 1 | McAfee | ❌ | 
-| 2 | Microsoft Defender | ❌ | 
-| 3 | Avast | ❌ | 
-| 4 | F-secure | ❌ | 
-| 5 | Malwarebytes | ❌ | 
-| 6 | Fortinet | ❌ | 
-| 7 | BitDefender | ❌ | 
-| 8 | Kaspersky | ❌ | 
-| 9 | NANO-Antivirus | ❌ | 
-| 10 | ClamAV | ❌ | 
-| 11 | AVG | ❌ | 
-| 12 | Alibaba | ❌ | 
---------------------------------------------------
 
 # How to use?
 First of all you need to decide which version of rshell listener you're using, netcore version works with Linux and other one works on Windows.
