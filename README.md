@@ -68,7 +68,21 @@ All other features:
 | 11 | AVG | ❌ | 
 | 12 | Alibaba | ❌ | 
 --------------------------------------------------
+
+### Tested sandboxes
   
+| № | Name | Evades |
+| --- | --- | --- |
+| 1 | Any.Run |  &#9989; | 
+| 2 | Intezer Analysis |  &#9989; | 
+| 3 | VirusTotal Jujubox |  &#9989; | 
+| 4 | Hubrid Analysis |  &#9989; | 
+| 5 | Malwarebytes |  &#9989; | 
+| 6 | Cuckoo Sandbox |  &#9989; | 
+| 7 | Joe Sandbox | &#9989; | 
+
+--------------------------------------------------
+
 ### Tested browsers:
 
 | № | Browser Name | Passwords | Cookies | History | Bookmarks |
