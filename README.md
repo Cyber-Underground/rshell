@@ -12,11 +12,6 @@ Last update: 16.1.22
 4. Open listener in administrator on in linux as sudo. Use rshell server netcore on linux and just rshell-server for windows
 5. Start listening to port you put in the stub, in above we used port 8080 so we will do that too.
 
-# ToDo:
-* Improve anti-vm and anti-debug systems.
-* Make command handling faster.
-* Add better encrypting to data transfer
-
 # Features
 Completely evades at least the following automated malware analysis environments
 * Any.Run
@@ -59,7 +54,7 @@ All other features:
 * List all services
 * Search for services
 * See installation location
-  
+* Bunch of troll commands for my fellow script kiddies
 --------------------------------------------------
 
 ### Tested anti malware providers:
