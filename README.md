@@ -7,7 +7,7 @@ Last update: 8.11.2022
 
 # How to use?
 1. Open rshell client in visual studio, scroll to line 160 where you see "address"
-2. Decode your IP address to base64 for example ```https://127.0.0.1:8080/ = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==```
+2. Decode your IP address to base64 for example ```http://127.0.0.1:8080/ = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==``` MAKE SURE TO USE HTTP NOT HTTPS!
 3. Build project
 4. Open listener in administrator on in linux as sudo. Use rshell server netcore on linux and just rshell-server for windows
 5. Start listening to port you put in the stub, in above we used port 8080 so we will do that too.
