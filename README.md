@@ -1,5 +1,5 @@
 # rshell
-Remote shell made in C#, blocks all known debuggers, vm's and sandboxes.
+Rshell is an advanced red team tool used for simulating real attacks. Rshell helps security researchers to overcome the risk of external attacks.
 
 Last update: 8.11.2022
 
