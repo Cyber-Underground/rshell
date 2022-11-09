@@ -63,3 +63,4 @@ C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\bin\Debug\rshell.pdb
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.Properties.Resources.resources
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.exe
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.pdb
+C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.Form.resources
