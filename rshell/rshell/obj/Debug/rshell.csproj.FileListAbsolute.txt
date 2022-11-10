@@ -63,3 +63,4 @@ C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\bin\Debug\WSS.exe
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\bin\Debug\WSS.pdb
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\WSS.exe
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\WSS.pdb
+C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.csproj.AssemblyReference.cache

