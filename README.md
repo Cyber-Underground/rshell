@@ -36,7 +36,7 @@ All other features:
 * Send any Powershell or CMD commands to user
 * Steals all saved passwords from many browsers (told in the previous text)
 * See pc information
-* run <program> [<arguments> <working dir>]
+* run <program\> [<arguments\> <working dir\>]
 * Anti-analysis
 * Run any application installed on the pc
 * See active windows
