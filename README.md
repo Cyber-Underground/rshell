@@ -6,14 +6,14 @@ Last update: 10.11.2022
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
 # How to use?
-1. Open rshell client in visual studio, scroll to line 160 where you see "address"
-2. Decode your IP address to base64 for example ```http://127.0.0.1:8080/ = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==``` MAKE SURE TO USE HTTP NOT HTTPS!
+1. Open rshell client in visual studio, scroll to line 160 where you'll see "address"
+2. Encode your IP address to base64 for example ```http://127.0.0.1:8080/ = aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==``` MAKE SURE TO USE HTTP NOT HTTPS!
 3. Build project
-4. Open listener in administrator on in linux as sudo. Use rshell server netcore on linux and just rshell-server for windows
-5. Start listening to port you put in the stub, in above we used port 8080 so we will do that too.
+4. Open listener in administrator in linux using sudo or as an administrator in Windows. Use rshell-server-netcore on linux and just rshell-server for windows
+5. Start listening to the port you put in the stub, in above we used port 8080 so we'll do that too.
 
 # Features
-Completely evades at least the following automated malware analysis environments
+Completely evades at least the following automated malware analysis environments:
 * Any.Run
 * Intezer Analysis
 * VirusTotal Jujubox
@@ -29,24 +29,18 @@ sandboxing software such as:
 * Sandboxie
 
 All other features:
-* Add program to Windows startup (you can choose the key name in registry)
 * Copy program to current user's Startup folder where it will be opened when Windows reboots.
 * Prompt to start application with administrator privileges
 * Customize drop path for items that are dropped to disk (including downloads)
 * Optional message that appears once the application is executed
 * Send any Powershell or CMD commands to user
 * Steals all saved passwords from many browsers (told in the previous text)
-* see pc information
-* run <program> <arguments> <working dir>
-* Prompt to start application with administrator privileges
+* See pc information
+* run <program> [<arguments> <working dir>]
 * Anti-analysis
 * Run any application installed on the pc
-* Send any Powershell or CMD commands to user
 * See active windows
-* see pc information
-* run <program> [<arguments> <working dir>]
-* Sets it's self to startup
-* Download files from out side sources
+* Download files from outside sources
 * Upload files
 * kill processes
 * Watch network traffic
@@ -83,7 +77,7 @@ All other features:
 | 20 | NANO | ❌ | 
 --------------------------------------------------
 
-### Tested sandboxes
+### Tested sandboxes:
   
 | № | Name | Evades |
 | --- | --- | --- |
@@ -113,4 +107,4 @@ All other features:
 | 7 | Cyberfox | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 
-Rshell is developed with the intension of using this tool only for educational purpose.
+Rshell is developed with the intention of using this tool only for educational purpose.
