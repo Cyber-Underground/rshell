@@ -54,7 +54,7 @@ All other features:
 * List all services
 * Search for services
 * See installation location
-* Bunch of troll commands for my fellow script kiddies
+* Decrypt and Encrypt all files
 --------------------------------------------------
 
 ### Tested anti malware providers:
