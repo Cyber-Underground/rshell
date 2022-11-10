@@ -81,7 +81,7 @@ namespace rshell
                         {
                             if (i == ary.Count - 1)
                             {
-                                Console.WriteLine("VM");
+                                Console.WriteLine("");
                             }
 
                         }
@@ -97,7 +97,7 @@ namespace rshell
                         {
                             if (i == ary.Count - 1)
                             {
-                                Console.WriteLine("VM");
+                                Console.WriteLine("");
                             }
 
                         }
