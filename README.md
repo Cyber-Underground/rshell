@@ -1,7 +1,7 @@
 # rshell
 Rshell is an advanced red team tool used for simulating real attacks. Rshell helps security researchers to overcome the risk of external attacks.
 
-Last update: 8.11.2022
+Last update: 10.11.2022
 
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
 
