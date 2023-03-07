@@ -12,9 +12,10 @@ Last update: 13.12.2022
 4. Open listener in administrator in linux using sudo or as an administrator in Windows. Use rshell-server-netcore on linux and just rshell-server for windows
 5. Start listening to the port you put in the stub, in above we used port 8080 so we'll do that too.
 
+# Features
 Rshell is an open-source post-exploitation software for students, researchers, red teamers and developers. It includes features such as:
 
-# Features
+
 Completely evades at least the following automated malware analysis environments:
 * Any.Run
 * Intezer Analysis
