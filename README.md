@@ -111,8 +111,6 @@ All other features:
 | 7 | Cyberfox | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 
-Rshell is developed with the intention of using this tool only for educational purpose.
-
 # Disclaimer
 Rshell is a tool intended for legal and ethical purposes only, including penetration testing, red teaming, education, malware analysis, and remote system management. Any malicious use of Rshell or any other hacking tool is strictly prohibited and may result in criminal prosecution. The developer of Rshell is not responsible for any damages, losses, or legal repercussions that may result from the misuse of this tool. By using Rshell, you agree to use it only for the aforementioned purposes and assume full responsibility for your actions.
 
