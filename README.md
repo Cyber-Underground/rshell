@@ -1,6 +1,18 @@
 # rshell
 Rshell is an advanced red team tool used for simulating real attacks. Rshell helps security researchers to overcome the risk of external attacks. Rshell is used by multiple major red team hacking companies to build safer and brighter future. Rshell is also used for education purposes, and is created for educational purposes only. Rshell is and should not be used for real life attacks without permission. 
 
+# Rshell can and should only be used for:
+
+Penetration testing: Rshell can be used by security professionals to test the security of their own systems and identify potential vulnerabilities that could be exploited by attackers.
+
+* Red teaming: Rshell can be used by red teams to simulate attacks on an organization's systems and identify weaknesses that need to be addressed.
+
+* Education: Rshell can be used for educational purposes to teach students about cybersecurity and penetration testing.
+
+* Malware analysis: Rshell can be used to test the effectiveness of malware analysis tools and techniques, by attempting to evade detection.
+
+* Remote access: Rshell can be used by system administrators to remotely access and manage systems.
+
 Last update: 13.12.2022
 
 <img src="https://github.com/spuqe/rshell/blob/main/rshell.jpg?" alt="RSHELL" border="0">
