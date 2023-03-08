@@ -111,4 +111,17 @@ All other features:
 | 7 | Cyberfox | &#9989; | &#9989; | &#8987; | &#8987; |
 --------------------------------------------------
 
-Rshell is developed with the intention of using this tool only for educational purpose.
+# Disclaimer
+Rshell is a tool intended for legal and ethical purposes only, including penetration testing, red teaming, education, malware analysis, and remote system management. Any malicious use of Rshell or any other hacking tool is strictly prohibited and may result in criminal prosecution. The developer of Rshell is not responsible for any damages, losses, or legal repercussions that may result from the misuse of this tool. By using Rshell, you agree to use it only for the aforementioned purposes and assume full responsibility for your actions.
+
+Rshell can and should only be used for:
+
+* Penetration testing: Rshell can be used by security professionals to test the security of their own systems and identify potential vulnerabilities that could be exploited by attackers.
+
+* Red teaming: Rshell can be used by red teams to simulate attacks on an organization's systems and identify weaknesses that need to be addressed.
+
+* Education: Rshell can be used for educational purposes to teach students about cybersecurity and penetration testing.
+
+* Malware analysis: Rshell can be used to test the effectiveness of malware analysis tools and techniques, by attempting to evade detection.
+
+* Remote access: Rshell can be used by system administrators to remotely access and manage systems.
