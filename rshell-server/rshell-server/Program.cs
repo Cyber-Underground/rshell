@@ -91,6 +91,8 @@ class Program
                         "  pid",
                         "  bin",
                         "  kill",
+                        "  screen",
+                        "  screens",
                         "",
                         "Troll commands: ",
                         "   Porn",
