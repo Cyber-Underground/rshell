@@ -52,6 +52,7 @@ All other features:
 * Search for services
 * See installation location
 * Decrypt and Encrypt all files
+* Take screenshots of one or both screens
 --------------------------------------------------
 
 ### Tested anti malware providers:
