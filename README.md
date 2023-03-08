@@ -32,27 +32,47 @@ sandboxing software such as:
 * Sandboxie
 
 All other features:
-* Copy program to current user's Startup folder where it will be opened when Windows reboots.
-* Prompt to start application with administrator privileges
-* Customize drop path for items that are dropped to disk (including downloads)
-* Optional message that appears once the application is executed
-* Send any Powershell or CMD commands to user
-* Steals all saved passwords from many browsers (told in the previous text)
-* See pc information
-* run <program\> [<arguments\> <working dir\>]
-* Anti-analysis
-* Run any application installed on the pc
-* See active windows
-* Download files from outside sources
-* Upload files
-* kill processes
-* Watch network traffic
-* See files in current folder
-* List all services
-* Search for services
-* See installation location
-* Decrypt and Encrypt all files
-* Take screenshots of one or both screens
+* Copy program to current user's Startup folder where it will be opened when Windows reboots: This command will copy the Rshell program to the Windows startup folder for the current user, so that it will automatically run when the computer is started up.
+
+* Prompt to start application with administrator privileges: This command will prompt the user to start the Rshell program with administrator privileges, which can be necessary for some actions that require elevated privileges.
+
+* Customize drop path for items that are dropped to disk (including downloads): This command allows the user to specify a custom location where any downloaded or dropped files will be saved on the disk.
+
+* Optional message that appears once the application is executed: This command allows the user to set an optional message that will be displayed to the user after the Rshell program is executed.
+
+* Send any Powershell or CMD commands to user: This command allows the user to send commands to the user's computer via Powershell or CMD, allowing for remote control of the system.
+
+* Steals all saved passwords from many browsers (told in the previous text): This command will attempt to steal any saved passwords from the user's web browsers, which could include sensitive information such as login credentials.
+
+* See pc information: This command will display information about the user's computer, including the operating system, hardware specs, and other details.
+
+* Run <program> [<arguments> <working dir>]: This command allows the user to run any program on the user's computer, with optional arguments and a custom working directory.
+
+* Anti-analysis: This command includes various features designed to evade analysis by malware analysis tools and sandboxes.
+
+* Run any application installed on the pc: This command allows the user to run any application installed on the user's computer, without needing to know the exact path to the executable.
+
+* See active windows: This command will display information about the currently active windows on the user's computer, including the window titles and handles.
+
+* Download files from outside sources: This command allows the user to download files from external sources, potentially including malware or other malicious content.
+
+* Upload files: This command allows the user to upload files from their computer to a remote server.
+
+* Kill processes: This command allows the user to terminate any running processes on the user's computer.
+
+* Watch network traffic: This command allows the user to monitor network traffic on the user's computer, potentially including sensitive information such as passwords or other data.
+
+* See files in current folder: This command will display a list of files in the current directory.
+
+* List all services: This command will display a list of all services running on the user's computer.
+
+* Search for services: This command allows the user to search for specific services running on the user's computer.
+
+* See installation location: This command will display the installation location of the Rshell program.
+
+* Decrypt and Encrypt all files: This command allows the user to encrypt or decrypt any files on the user's computer.
+
+* Take screenshots of one or both screens: This command allows the user to capture screenshots of the user's computer, either of a single screen or both screens.
 --------------------------------------------------
 
 ### Tested anti malware providers:
