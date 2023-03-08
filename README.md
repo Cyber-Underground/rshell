@@ -118,7 +118,7 @@ Rshell is a tool intended for legal and ethical purposes only, including penetra
 
 Rshell can and should only be used for:
 
-Penetration testing: Rshell can be used by security professionals to test the security of their own systems and identify potential vulnerabilities that could be exploited by attackers.
+* Penetration testing: Rshell can be used by security professionals to test the security of their own systems and identify potential vulnerabilities that could be exploited by attackers.
 
 * Red teaming: Rshell can be used by red teams to simulate attacks on an organization's systems and identify weaknesses that need to be addressed.
 
