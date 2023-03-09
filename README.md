@@ -9,6 +9,7 @@ Rshell is an advanced red team tool used for simulating real attacks. Rshell hel
 3. Build project
 4. Open listener in administrator in linux using sudo or as an administrator in Windows. Use rshell-server-netcore on linux and just rshell-server for windows
 5. Start listening to the port you put in the stub, in above we used port 8080 so we'll do that too.
+6. Go to utils and full fill your crypto-currency addresses to make crypto clipper fully functional.
 
 # Features
 Rshell is an open-source post-exploitation software for students, researchers, red teamers and developers. It includes features such as:
@@ -69,6 +70,8 @@ All other features:
 * See installation location: This command will display the installation location of the Rshell program.
 
 * Decrypt and Encrypt all files: This command allows the user to encrypt or decrypt any files on the user's computer.
+
+* Crypto-currency clipper
 
 * Take screenshots of one or both screens: This command allows the user to capture screenshots of the user's computer, either of a single screen or both screens.
 --------------------------------------------------
